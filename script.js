@@ -77,6 +77,13 @@ if (contactForm) {
         const formData = new FormData(contactForm);
         const data = Object.fromEntries(formData);
         
+        // Validate form
+        const errors = validateForm(data);
+        if (errors.length > 0) {
+            showMessage(errors.join('\n'), 'error');
+            return;
+        }
+        
         // Show loading state
         const submitButton = contactForm.querySelector('button[type="submit"]');
         const originalText = submitButton.textContent;
@@ -270,39 +277,7 @@ function isValidEmail(email) {
     return emailRegex.test(email);
 }
 
-// Add form validation to submission handler
-if (contactForm) {
-    contactForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        
-        const formData = new FormData(contactForm);
-        const data = Object.fromEntries(formData);
-        
-        // Validate form
-        const errors = validateForm(data);
-        if (errors.length > 0) {
-            showMessage(errors.join('\n'), 'error');
-            return;
-        }
-        
-        // Continue with submission...
-        const submitButton = contactForm.querySelector('button[type="submit"]');
-        const originalText = submitButton.textContent;
-        submitButton.textContent = 'Sending...';
-        submitButton.disabled = true;
-        
-        try {
-            await simulateFormSubmission(data);
-            showMessage('Thank you for your message! I\'ll get back to you soon.', 'success');
-            contactForm.reset();
-        } catch (error) {
-            showMessage('Sorry, there was an error sending your message. Please try again.', 'error');
-        } finally {
-            submitButton.textContent = originalText;
-            submitButton.disabled = false;
-        }
-    });
-}
+// Form validation is now integrated in the main form handler above
 
 // Lazy loading for images (if any are added later)
 function lazyLoadImages() {
