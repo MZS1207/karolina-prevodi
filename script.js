@@ -323,40 +323,31 @@ const debouncedScroll = debounce(() => {
 
 window.addEventListener('scroll', debouncedScroll);
 
-// FAQ Accordion functionality
-document.addEventListener('DOMContentLoaded', () => {
-    const faqItems = document.querySelectorAll('.faq-item');
-    
-    faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
+// Simple FAQ toggle function
+function toggleFAQ(id) {
+    // Close all FAQ items
+    for (let i = 1; i <= 5; i++) {
+        const item = document.getElementById('faq' + i);
+        const answer = document.getElementById('faq' + i + '-answer');
         
-        question.addEventListener('click', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            
-            // Close other FAQ items
-            faqItems.forEach(otherItem => {
-                if (otherItem !== item && otherItem.classList.contains('active')) {
-                    otherItem.classList.remove('active');
-                    const otherAnswer = otherItem.querySelector('.faq-answer');
-                    otherAnswer.style.display = 'none';
-                }
-            });
-            
-            // Toggle current FAQ item
-            const isActive = item.classList.contains('active');
-            const answer = item.querySelector('.faq-answer');
-            
-            if (isActive) {
-                item.classList.remove('active');
-                answer.style.display = 'none';
-            } else {
-                item.classList.add('active');
-                answer.style.display = 'block';
-            }
-        });
-    });
-});
+        if (i !== parseInt(id.replace('faq', ''))) {
+            item.classList.remove('active');
+            answer.style.display = 'none';
+        }
+    }
+    
+    // Toggle current FAQ item
+    const currentItem = document.getElementById(id);
+    const currentAnswer = document.getElementById(id + '-answer');
+    
+    if (currentItem.classList.contains('active')) {
+        currentItem.classList.remove('active');
+        currentAnswer.style.display = 'none';
+    } else {
+        currentItem.classList.add('active');
+        currentAnswer.style.display = 'block';
+    }
+}
 
 // Console welcome message
 console.log('%c Karolina Prevodi - Professional Translation Services ', 'background: #3498db; color: white; font-size: 16px; padding: 10px; border-radius: 5px;');
