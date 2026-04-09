@@ -86,25 +86,32 @@ if (contactForm) {
         submitButton.disabled = true;
         
         try {
-            // Demo simulation - EmailJS setup required for actual sending
-            console.log('Form data (demo):', data);
+            // Submit form to Formspree
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
             
-            // Simulate network delay
-            await new Promise(resolve => setTimeout(resolve, 1500));
-            
-            // Show success message with demo notice
-            const successMessage = currentLang === 'sr' 
-                ? 'Poruka je poslata (demo)! Za pravo slanje, potrebno je podesiti EmailJS. Proverite EMAILJS_SETUP.md fajl.'
-                : 'Message sent (demo)! EmailJS setup required for actual sending. Check EMAILJS_SETUP.md file.';
-            showMessage(successMessage, 'success');
-            contactForm.reset();
+            if (response.ok) {
+                // Show success message
+                const successMessage = currentLang === 'sr' 
+                    ? 'Poruka je uspe\u0161no poslata! Javi\u0107u vam se uskoro.'
+                    : 'Message sent successfully! I\'ll get back to you soon.';
+                showMessage(successMessage, 'success');
+                contactForm.reset();
+            } else {
+                throw new Error('Form submission failed');
+            }
             
         } catch (error) {
-            console.error('Form error:', error);
+            console.error('Formspree error:', error);
             // Show error message
             const errorMessage = currentLang === 'sr'
-                ? 'Gre\u0161ka pri slanju. Molimo poku\u0161ajte ponovo.'
-                : 'Error sending message. Please try again.';
+                ? 'Na\u017ealost, do\u0161lo je do gre\u0161ke pri slanju poruke. Poku\u0161ajte ponovo.'
+                : 'Sorry, there was an error sending your message. Please try again.';
             showMessage(errorMessage, 'error');
         } finally {
             // Reset button state
@@ -114,10 +121,7 @@ if (contactForm) {
     });
 }
 
-// Initialize EmailJS
-(function() {
-    emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
-})();
+// Formspree handles email sending automatically
 
 // Show message function
 function showMessage(message, type) {
