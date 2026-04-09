@@ -707,6 +707,21 @@ h1, h2, h3, h4, h5, h6 {
     transition: width 2s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     box-shadow: 0 2px 4px rgba(52, 152, 219, 0.3);
+    animation: fillBar 2s ease-out forwards;
+}
+
+.skill-progress[data-skill="95"] {
+    animation-delay: 0.5s;
+}
+
+.skill-progress[data-skill="100"] {
+    animation-delay: 0.7s;
+}
+
+@keyframes fillBar {
+    to {
+        width: var(--skill-width);
+    }
 }
 
 .skill-progress::after {
