@@ -484,7 +484,7 @@ class LanguageSwitcher {
     
     updatePageTitle(lang) {
         const title = lang === 'sr' 
-            ? 'Karolina Prevodi - Profesionalne Usluge PrevoÄenja'
+            ? 'Karolina Prevodi - Profesionalne Usluge Prevo\u0111enja'
             : 'Karolina Prevodi - Professional Translation Services';
         document.title = title;
         
@@ -492,7 +492,7 @@ class LanguageSwitcher {
         const metaDescription = document.querySelector('meta[name="description"]');
         if (metaDescription) {
             metaDescription.content = lang === 'sr'
-                ? 'Profesionalne prevodilaÄke usluge od Karoline. Prevodi visokog kvaliteta za dokumente, veb sajtove i viÅ¡e.'
+                ? 'Profesionalne prevodila\u010dke usluge od Karoline. Prevodi visokog kvaliteta za dokumente, veb sajtove i vi\u0161e.'
                 : 'Professional translation services by Karolina. High-quality translations for documents, websites, and more.';
         }
     }
