@@ -86,9 +86,15 @@ if (contactForm) {
         submitButton.disabled = true;
         
         try {
-            // Here you would typically send to a backend service
-            // For now, we'll simulate a successful submission
-            await simulateFormSubmission(data);
+            // Send email using EmailJS
+            await emailjs.send('service_default', 'template_default', {
+                from_name: data.name,
+                from_email: data.email,
+                service_type: data.service,
+                message: data.message,
+                attachment: data.attachment ? data.attachment.name : 'No attachment',
+                to_email: 'karolinalukac@gmail.com'
+            });
             
             // Show success message
             const successMessage = currentLang === 'sr' 
@@ -98,6 +104,7 @@ if (contactForm) {
             contactForm.reset();
             
         } catch (error) {
+            console.error('EmailJS error:', error);
             // Show error message
             const errorMessage = currentLang === 'sr'
                 ? 'Na\u017ealost, do\u0161lo je do gre\u0161ke pri slanju poruke. Poku\u0161ajte ponovo.'
@@ -111,19 +118,10 @@ if (contactForm) {
     });
 }
 
-// Simulate form submission (replace with actual backend call)
-function simulateFormSubmission(data) {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            // Simulate 90% success rate
-            if (Math.random() > 0.1) {
-                resolve({ success: true });
-            } else {
-                reject(new Error('Network error'));
-            }
-        }, 1500);
-    });
-}
+// Initialize EmailJS
+(function() {
+    emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+})();
 
 // Show message function
 function showMessage(message, type) {
