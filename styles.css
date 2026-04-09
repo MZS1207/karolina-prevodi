@@ -1092,24 +1092,39 @@ h1, h2, h3, h4, h5, h6 {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     font-size: 1.3rem;
     flex-shrink: 0;
+    transform: rotate(0deg);
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+    color: white;
 }
 
 .faq-answer {
     display: none;
     background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease-out;
 }
 
 .faq-item.active .faq-answer {
     display: block;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .faq-answer p {
-    padding: 0 2.5rem 2.5rem;
+    padding: 0 2.5rem 0;
     color: #495057;
     line-height: 1.8;
     margin: 0;
     font-size: 1.05rem;
-    animation: fadeInUp 0.6s ease-out;
+    transition: padding 0.3s ease-out;
+}
+
+.faq-item.active .faq-answer p {
+    padding: 0 2.5rem 2.5rem;
 }
 
 .portfolio-grid {
