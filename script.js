@@ -92,7 +92,7 @@ if (contactForm) {
             
             // Show success message
             const successMessage = currentLang === 'sr' 
-                ? 'Hvala vam na poruci! JaviÄu vam se uskoro.'
+                ? 'Hvala vam na poruci! Javi\u0107u vam se uskoro.'
                 : 'Thank you for your message! I\'ll get back to you soon.';
             showMessage(successMessage, 'success');
             contactForm.reset();
@@ -100,7 +100,7 @@ if (contactForm) {
         } catch (error) {
             // Show error message
             const errorMessage = currentLang === 'sr'
-                ? 'NaÅ¾alost, doÅ¡lo je do greÅ¡ke pri slanju poruke. PokuÅ¡ajte ponovo.'
+                ? 'Na\u017ealost, do\u0161lo je do gre\u0161ke pri slanju poruke. Poku\u0161ajte ponovo.'
                 : 'Sorry, there was an error sending your message. Please try again.';
             showMessage(errorMessage, 'error');
         } finally {
@@ -245,14 +245,14 @@ function validateForm(formData) {
     
     if (!formData.name || formData.name.trim().length < 2) {
         const nameError = currentLang === 'sr' 
-            ? 'Molimo unesite vaÅ¡e ime (najmanje 2 karaktera)'
+            ? 'Molimo unesite va\u0161e ime (najmanje 2 karaktera)'
             : 'Please enter your name (at least 2 characters)';
         errors.push(nameError);
     }
     
     if (!formData.email || !isValidEmail(formData.email)) {
         const emailError = currentLang === 'sr'
-            ? 'Molimo unesite vaÅ¾eÄu email adresu'
+            ? 'Molimo unesite va\u017eeu email adresu'
             : 'Please enter a valid email address';
         errors.push(emailError);
     }
