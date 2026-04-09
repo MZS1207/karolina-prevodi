@@ -198,51 +198,12 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 0 0 10px 10px;
 }
 
-.flag {
-    width: 24px;
-    height: 16px;
-    display: inline-block;
+/* Flag Icons Styles */
+.fi {
     margin-right: 8px;
+    font-size: 16px;
     border-radius: 2px;
-    background-size: cover;
-    background-position: center;
     box-shadow: 0 1px 3px rgba(0,0,0,0.2);
-}
-
-.flag-gb {
-    background: linear-gradient(135deg, #012169 33.3%, #FFFFFF 33.3%, #FFFFFF 66.6%, #C8102E 66.6%);
-    position: relative;
-}
-
-.flag-gb::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-        linear-gradient(90deg, transparent 40%, #C8102E 40%, #C8102E 60%, transparent 60%),
-        linear-gradient(0deg, transparent 40%, #C8102E 40%, #C8102E 60%, transparent 60%);
-    opacity: 0.3;
-}
-
-.flag-rs {
-    background: linear-gradient(180deg, #C6363C 50%, #0C4076 50%);
-    position: relative;
-}
-
-.flag-rs::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 8px;
-    height: 8px;
-    background: white;
-    border-radius: 50%;
-    box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
 }
 
 .nav-toggle {
@@ -1802,9 +1763,8 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 0.8rem;
     }
 
-    .flag {
-        width: 20px;
-        height: 14px;
+    .fi {
+        font-size: 14px;
         margin-right: 6px;
     }
 }
