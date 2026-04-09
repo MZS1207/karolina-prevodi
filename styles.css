@@ -1214,7 +1214,19 @@ h1, h2, h3, h4, h5, h6 {
 
 .contact-info-text p {
     color: #6c757d;
-    font-size: 0.9rem;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.contact-link {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #2980b9;
+    text-decoration: underline;
 }
 
 .social-links {
@@ -1269,6 +1281,26 @@ h1, h2, h3, h4, h5, h6 {
 .form-input:focus {
     outline: none;
     border-color: #3498db;
+}
+
+.form-input[type="file"] {
+    padding: 0.8rem;
+    border: 2px dashed #ddd;
+    background: #fafafa;
+    cursor: pointer;
+}
+
+.form-input[type="file"]:hover {
+    border-color: #3498db;
+    background: #f8f9fa;
+}
+
+.form-help {
+    display: block;
+    margin-top: 0.5rem;
+    color: #6c757d;
+    font-size: 0.85rem;
+    font-style: italic;
 }
 
 .form-input textarea {

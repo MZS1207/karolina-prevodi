@@ -640,14 +640,14 @@
                                 <i class="fas fa-envelope"></i>
                                 <div class="contact-info-text">
                                     <h4 data-translate="contact-email-label">Email</h4>
-                                    <p>karolina@karolina-prevodi.com</p>
+                                    <p><a href="mailto:karolinalukac@gmail.com" class="contact-link">karolinalukac@gmail.com</a></p>
                                 </div>
                             </div>
                             <div class="contact-item">
                                 <i class="fas fa-phone"></i>
                                 <div class="contact-info-text">
                                     <h4 data-translate="contact-phone-label">Phone</h4>
-                                    <p>+381 60 123 4567</p>
+                                    <p><a href="tel:+381603204554" class="contact-link">+381 60 3204 554</a></p>
                                 </div>
                             </div>
                             <div class="contact-item">
@@ -700,6 +700,11 @@
                             <div class="form-group">
                                 <label for="message" class="form-label" data-translate="form-message-label">Message *</label>
                                 <textarea id="message" name="message" class="form-input" rows="5" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="attachment" class="form-label" data-translate="form-attachment-label">Attachment (Optional)</label>
+                                <input type="file" id="attachment" name="attachment" class="form-input" accept=".pdf,.doc,.docx,.txt,.pages">
+                                <small class="form-help" data-translate="form-attachment-help">PDF, Word, or text files (max 10MB)</small>
                             </div>
                             <button type="submit" class="btn btn-primary btn-full" data-translate="form-submit-btn">Send Message</button>
                         </form>

@@ -103,6 +103,8 @@ const translations = {
         'form-service-general': 'General Translation',
         'form-service-other': 'Other',
         'form-message-label': 'Message *',
+        'form-attachment-label': 'Attachment (Optional)',
+        'form-attachment-help': 'PDF, Word, or text files (max 10MB)',
         'form-submit-btn': 'Send Message',
         
         // Footer
@@ -275,6 +277,8 @@ const translations = {
         'form-service-general': 'OpÅ¡te PrevoÄenje',
         'form-service-other': 'Ostalo',
         'form-message-label': 'Poruka *',
+        'form-attachment-label': 'Prilog (Opciono)',
+        'form-attachment-help': 'PDF, Word ili tekstualni fajlovi (max 10MB)',
         'form-submit-btn': 'PoÅ¡aljite Poruku',
         
         // Footer
