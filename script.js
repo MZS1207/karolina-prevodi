@@ -192,27 +192,42 @@ function animateStats() {
 // Initialize stats animation
 animateStats();
 
-// Animate skill bars
+// Animate skill bars - Simple version
 function animateSkills() {
     const skillBars = document.querySelectorAll('.skill-progress');
     
-    skillBars.forEach(bar => {
-        const skill = bar.dataset.skill;
-        if (skill) {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        setTimeout(() => {
+    // Animate immediately when page loads
+    setTimeout(() => {
+        skillBars.forEach(bar => {
+            const skill = bar.dataset.skill;
+            if (skill) {
+                bar.style.width = skill + '%';
+            }
+        });
+    }, 500);
+}
+
+// Also animate when skills section becomes visible
+const skillsSection = document.querySelector('.about-skills');
+if (skillsSection) {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const skillBars = entry.target.querySelectorAll('.skill-progress');
+                skillBars.forEach((bar, index) => {
+                    setTimeout(() => {
+                        const skill = bar.dataset.skill;
+                        if (skill) {
                             bar.style.width = skill + '%';
-                        }, 200);
-                        observer.unobserve(entry.target);
-                    }
+                        }
+                    }, index * 200);
                 });
-            });
-            
-            observer.observe(bar);
-        }
+                observer.unobserve(entry.target);
+            }
+        });
     });
+    
+    observer.observe(skillsSection);
 }
 
 // Initialize skills animation
