@@ -326,9 +326,11 @@ window.addEventListener('scroll', debouncedScroll);
 // FAQ Accordion functionality
 document.addEventListener('DOMContentLoaded', () => {
     const faqItems = document.querySelectorAll('.faq-item');
+    console.log('FAQ items found:', faqItems.length);
     
-    faqItems.forEach(item => {
+    faqItems.forEach((item, index) => {
         const question = item.querySelector('.faq-question');
+        console.log(`FAQ item ${index}:`, question);
         
         question.addEventListener('click', () => {
             // Close other FAQ items
@@ -340,6 +342,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Toggle current FAQ item
             item.classList.toggle('active');
+            console.log('FAQ item toggled:', item.classList.contains('active'));
         });
     });
 });
