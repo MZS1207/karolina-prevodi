@@ -1099,10 +1099,12 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
     transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    opacity: 0;
 }
 
 .faq-item.active .faq-answer {
-    max-height: 600px;
+    max-height: 1000px;
+    opacity: 1;
 }
 
 .faq-answer p {
