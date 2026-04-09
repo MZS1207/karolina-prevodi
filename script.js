@@ -86,29 +86,25 @@ if (contactForm) {
         submitButton.disabled = true;
         
         try {
-            // Send email using EmailJS
-            await emailjs.send('service_default', 'template_default', {
-                from_name: data.name,
-                from_email: data.email,
-                service_type: data.service,
-                message: data.message,
-                attachment: data.attachment ? data.attachment.name : 'No attachment',
-                to_email: 'karolinalukac@gmail.com'
-            });
+            // Demo simulation - EmailJS setup required for actual sending
+            console.log('Form data (demo):', data);
             
-            // Show success message
+            // Simulate network delay
+            await new Promise(resolve => setTimeout(resolve, 1500));
+            
+            // Show success message with demo notice
             const successMessage = currentLang === 'sr' 
-                ? 'Hvala vam na poruci! Javi\u0107u vam se uskoro.'
-                : 'Thank you for your message! I\'ll get back to you soon.';
+                ? 'Poruka je poslata (demo)! Za pravo slanje, potrebno je podesiti EmailJS. Proverite EMAILJS_SETUP.md fajl.'
+                : 'Message sent (demo)! EmailJS setup required for actual sending. Check EMAILJS_SETUP.md file.';
             showMessage(successMessage, 'success');
             contactForm.reset();
             
         } catch (error) {
-            console.error('EmailJS error:', error);
+            console.error('Form error:', error);
             // Show error message
             const errorMessage = currentLang === 'sr'
-                ? 'Na\u017ealost, do\u0161lo je do gre\u0161ke pri slanju poruke. Poku\u0161ajte ponovo.'
-                : 'Sorry, there was an error sending your message. Please try again.';
+                ? 'Gre\u0161ka pri slanju. Molimo poku\u0161ajte ponovo.'
+                : 'Error sending message. Please try again.';
             showMessage(errorMessage, 'error');
         } finally {
             // Reset button state
