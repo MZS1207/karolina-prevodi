@@ -103,6 +103,9 @@ const translations = {
         'form-service-general': 'General Translation',
         'form-service-other': 'Other',
         'form-message-label': 'Message *',
+        'form-name-placeholder': 'Enter your name',
+        'form-email-placeholder': 'Enter your email',
+        'form-message-placeholder': 'Enter your message...',
         'form-attachment-label': 'Attachment (Optional)',
         'form-attachment-help': 'PDF, Word, or text files (max 10MB)',
         'form-submit-btn': 'Send Message',
@@ -277,6 +280,9 @@ const translations = {
         'form-service-general': 'Op\u0161te Prevo\u0111enje',
         'form-service-other': 'Ostalo',
         'form-message-label': 'Poruka *',
+        'form-name-placeholder': 'Unesite va\u0161e ime',
+        'form-email-placeholder': 'Unesite va\u0161 email',
+        'form-message-placeholder': 'Unesite va\u0161u poruku...',
         'form-attachment-label': 'Prilog (Opciono)',
         'form-attachment-help': 'PDF, Word ili tekstualni fajlovi (max 10MB)',
         'form-submit-btn': 'Po\u0161aljite Poruku',
@@ -434,22 +440,32 @@ class LanguageSwitcher {
     }
     
     updateFormElements(lang) {
-        // Update form placeholders
+        // Update form placeholders using translations
         const nameInput = document.getElementById('name');
         const emailInput = document.getElementById('email');
         const messageTextarea = document.getElementById('message');
         
         if (nameInput) {
-            nameInput.placeholder = lang === 'sr' ? 'Unesite vaÅ¡e ime' : 'Enter your name';
+            nameInput.placeholder = translations[lang]?.['form-name-placeholder'] || '';
         }
         
         if (emailInput) {
-            emailInput.placeholder = lang === 'sr' ? 'Unesite vaÅ¡ email' : 'Enter your email';
+            emailInput.placeholder = translations[lang]?.['form-email-placeholder'] || '';
         }
         
         if (messageTextarea) {
-            messageTextarea.placeholder = lang === 'sr' ? 'Unesite vaÅ¡u poruku...' : 'Enter your message...';
+            messageTextarea.placeholder = translations[lang]?.['form-message-placeholder'] || '';
         }
+        
+        // Update elements with data-translate-placeholder attribute
+        const placeholderElements = document.querySelectorAll('[data-translate-placeholder]');
+        placeholderElements.forEach(element => {
+            const key = element.dataset.translatePlaceholder;
+            const translation = translations[lang]?.[key];
+            if (translation) {
+                element.placeholder = translation;
+            }
+        });
     }
     
     updateLanguageButton() {
