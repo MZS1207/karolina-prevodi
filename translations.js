@@ -220,7 +220,7 @@ const translations = {
         'stat-langs-label': 'Jezickih Parova',
         'stat-satisfaction-number': '98%',
         'stat-satisfaction-label': 'Zadovoljstvo Klijenata',
-        'skills-title': 'Jeziki\u010dko Znanje',
+        'skills-title': 'Jezicko Znanje',
         'skill-english': 'Engleski',
         'skill-serbian': 'Srpski',
         
