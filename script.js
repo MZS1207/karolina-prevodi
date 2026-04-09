@@ -323,14 +323,18 @@ const debouncedScroll = debounce(() => {
 
 window.addEventListener('scroll', debouncedScroll);
 
-// FAQ Accordion functionality - Simple version
+// FAQ Accordion functionality - Debug version
 document.addEventListener('DOMContentLoaded', () => {
+    alert('FAQ JavaScript loaded!');
     const faqItems = document.querySelectorAll('.faq-item');
+    alert('FAQ items found: ' + faqItems.length);
     
-    faqItems.forEach(item => {
+    faqItems.forEach((item, index) => {
         const question = item.querySelector('.faq-question');
+        alert('FAQ question ' + index + ' found: ' + (question ? 'yes' : 'no'));
         
         question.addEventListener('click', (e) => {
+            alert('FAQ item ' + index + ' clicked!');
             e.preventDefault();
             e.stopPropagation();
             
@@ -354,6 +358,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 item.classList.add('active');
                 answer.style.display = 'block';
             }
+            
+            alert('FAQ item toggled! Active: ' + item.classList.contains('active'));
         });
     });
 });
