@@ -323,23 +323,37 @@ const debouncedScroll = debounce(() => {
 
 window.addEventListener('scroll', debouncedScroll);
 
-// FAQ Accordion functionality
+// FAQ Accordion functionality - Simple version
 document.addEventListener('DOMContentLoaded', () => {
     const faqItems = document.querySelectorAll('.faq-item');
     
     faqItems.forEach(item => {
         const question = item.querySelector('.faq-question');
         
-        question.addEventListener('click', () => {
+        question.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            
             // Close other FAQ items
             faqItems.forEach(otherItem => {
                 if (otherItem !== item && otherItem.classList.contains('active')) {
                     otherItem.classList.remove('active');
+                    const otherAnswer = otherItem.querySelector('.faq-answer');
+                    otherAnswer.style.display = 'none';
                 }
             });
             
             // Toggle current FAQ item
-            item.classList.toggle('active');
+            const isActive = item.classList.contains('active');
+            const answer = item.querySelector('.faq-answer');
+            
+            if (isActive) {
+                item.classList.remove('active');
+                answer.style.display = 'none';
+            } else {
+                item.classList.add('active');
+                answer.style.display = 'block';
+            }
         });
     });
 });
