@@ -27,6 +27,10 @@ const translations = {
         'service-technical-desc': 'Accurate translation of machine manuals, technical specifications, user guides, and engineering documentation with proper technical terminology.',
         'service-general-title': 'General Translation',
         'service-general-desc': 'Comprehensive Serbian-English translation services for various document types including legal, business, and academic materials.',
+        'service-legal-title': 'Legal Documents',
+        'service-legal-desc': 'Professional translation of legal documents, contracts, court papers, immigration documents, and official certificates with legal terminology accuracy.',
+        'service-it-title': 'Engineering & IT',
+        'service-it-desc': 'Specialized translation for engineering, construction, and IT sectors including technical specifications, software documentation, and architectural plans.',
         
         // About Section
         'about-badge': 'About Me',
@@ -54,6 +58,10 @@ const translations = {
         'feature-precision': 'Precision Guaranteed',
         'feature-versatile': 'Versatile Expertise',
         'feature-reliable': 'Reliable Quality',
+        'feature-legal-accuracy': 'Legal Precision',
+        'feature-confidentiality': 'Confidentiality Assured',
+        'feature-industry-expertise': 'Industry Expertise',
+        'feature-technical-accuracy': 'Technical Accuracy',
         
         // Portfolio Section
         'portfolio-title': 'Recent Projects',
@@ -92,6 +100,8 @@ const translations = {
         'form-service-books': 'Book Translation',
         'form-service-medical': 'Medical & Pharmaceutical',
         'form-service-technical': 'Technical Manuals',
+        'form-service-legal': 'Legal Documents',
+        'form-service-it': 'Engineering & IT',
         'form-service-general': 'General Translation',
         'form-service-other': 'Other',
         'form-message-label': 'Message *',
@@ -103,6 +113,8 @@ const translations = {
         'footer-books-link': 'Book Translation',
         'footer-medical-link': 'Medical & Pharmaceutical',
         'footer-technical-link': 'Technical Manuals',
+        'footer-legal-link': 'Legal Documents',
+        'footer-it-link': 'Engineering & IT',
         'footer-general-link': 'General Translation',
         'footer-company-heading': 'Company',
         'footer-about-link': 'About',
@@ -189,6 +201,10 @@ const translations = {
         'service-technical-desc': 'Precizno prevoÄenje uputstva za maÅ¡ine, tehniÄkih specifikacija, korisniÄkih vodiÄa i inÅ¾enjerske dokumentacije sa pravilnom tehniÄkom terminologijom.',
         'service-general-title': 'OpÅ¡te PrevoÄenje',
         'service-general-desc': 'Kompletne prevodilaÄke usluge srpski-engleski za razliÄite tipove dokumenata ukljuÄujuÄi pravne, poslovne i akademske materijale.',
+        'service-legal-title': 'Pravni Dokumenti',
+        'service-legal-desc': 'Profesionalno prevoÄenje pravnih dokumenata, ugovora, sudskih spisa, imigracionih dokumenata i zvaniÄnih sertifikata sa preciznom pravnom terminologijom.',
+        'service-it-title': 'MaÅ¡instvo & IT',
+        'service-it-desc': 'Specijalizovano prevoÄenje za inÅ¾enjering, gradjevinu i IT sektore ukljuÄujuÄi tehniÄke specifikacije, softversku dokumentaciju i arhitektonske planove.',
         
         // About Section
         'about-badge': 'O meni',
@@ -216,6 +232,10 @@ const translations = {
         'feature-precision': 'Preciznost Zagarantovana',
         'feature-versatile': 'Svestranost Ekspertize',
         'feature-reliable': 'Pouzdan Kvalitet',
+        'feature-legal-accuracy': 'Pravna Preciznost',
+        'feature-confidentiality': 'Poverljivost Zagarantovana',
+        'feature-industry-expertise': 'Industrijska Ekspertiza',
+        'feature-technical-accuracy': 'TehniÄka TaÄnost',
         
         // Portfolio Section
         'portfolio-title': 'Nedavni Projekti',
@@ -254,6 +274,8 @@ const translations = {
         'form-service-books': 'PrevoÄenje Knjiga',
         'form-service-medical': 'Medicinsko i Farmaceutsko',
         'form-service-technical': 'TehniÄki PriruÄnici',
+        'form-service-legal': 'Pravni Dokumenti',
+        'form-service-it': 'MaÅ¡instvo & IT',
         'form-service-general': 'OpÅ¡te PrevoÄenje',
         'form-service-other': 'Ostalo',
         'form-message-label': 'Poruka *',
@@ -265,6 +287,8 @@ const translations = {
         'footer-books-link': 'PrevoÄenje Knjiga',
         'footer-medical-link': 'Medicinsko i Farmaceutsko',
         'footer-technical-link': 'TehniÄki PriruÄnici',
+        'footer-legal-link': 'Pravni Dokumenti',
+        'footer-it-link': 'MaÅ¡instvo & IT',
         'footer-general-link': 'OpÅ¡te PrevoÄenje',
         'footer-company-heading': 'Kompanija',
         'footer-about-link': 'O meni',
