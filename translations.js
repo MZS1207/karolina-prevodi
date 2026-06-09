@@ -1,6 +1,172 @@
 // Translation System for Karolina Prevodi Website
 
 const translations = {
+    sr: {
+        // Navigation
+        'nav-home': 'Početna',
+        'nav-services': 'Usluge',
+        'nav-about': 'O meni',
+        'nav-portfolio': 'Portfolio',
+        'nav-contact': 'Kontakt',
+
+        // Hero Section
+        'hero-badge': 'Besplatna procena u roku od 24 časa',
+        'hero-title': 'Stručni prevodi <span class="highlight">srpski – engleski</span>',
+        'hero-subtitle': 'Specijalizovani prevodi knjiga, medicinske dokumentacije i tehničkih materijala — precizno, poverljivo i u dogovorenom roku.',
+        'btn-get-quote': 'Zatražite ponudu',
+        'btn-view-work': 'Pogledajte rad',
+
+        // Services Section
+        'services-badge': 'Čime se bavim',
+        'services-title': 'Usluge',
+        'services-subtitle': 'Specijalizovane prevodilačke usluge za srpski i engleski jezik',
+        'service-books-title': 'Prevođenje knjiga',
+        'service-books-desc': 'Profesionalno prevođenje beletristike i publicistike, uz čuvanje autorovog glasa i kulturnih nijansi između srpskog i engleskog.',
+        'service-medical-title': 'Medicina i farmacija',
+        'service-medical-desc': 'Specijalizovano prevođenje medicinske dokumentacije, farmaceutskih materijala, informacija za pacijente i kliničkih istraživanja, uz preciznu medicinsku terminologiju.',
+        'service-technical-title': 'Tehnička uputstva',
+        'service-technical-desc': 'Precizno prevođenje uputstava za mašine, tehničkih specifikacija, korisničkih vodiča i inženjerske dokumentacije, uz pravilnu tehničku terminologiju.',
+        'service-general-title': 'Opšte prevođenje',
+        'service-general-desc': 'Kompletne prevodilačke usluge za različite tipove dokumenata, uključujući pravne, poslovne i akademske materijale.',
+        'service-legal-title': 'Pravni dokumenti',
+        'service-legal-desc': 'Profesionalno prevođenje pravnih dokumenata, ugovora, sudskih spisa, imigracionih dokumenata i zvaničnih potvrda, uz preciznu pravnu terminologiju.',
+        'service-it-title': 'Mašinstvo i IT',
+        'service-it-desc': 'Specijalizovano prevođenje za inženjering, građevinarstvo i IT sektor, uključujući tehničke specifikacije, softversku dokumentaciju i arhitektonske planove.',
+
+        // About Section
+        'about-badge': 'O meni',
+        'about-title': 'O Karolini',
+        'about-subtitle': 'Povezivanje kultura kroz jezik',
+        'about-description': 'Profesionalni sam prevodilac sa višegodišnjim iskustvom u premošćavanju jezičkih i kulturnih razlika. Strast prema jezicima i pažnja prema detaljima garantuju da svaki prevod zadrži izvorno značenje, ton i kulturne nijanse.',
+        'about-highlight-1-title': 'Uska specijalizacija',
+        'about-highlight-1-desc': 'Fokus isključivo na srpsko-engleski jezički par znači dublje poznavanje terminologije i kulture oba jezika.',
+        'about-highlight-2-title': 'Poverljivost',
+        'about-highlight-2-desc': 'Svi dokumenti se tretiraju strogo poverljivo, uz mogućnost potpisivanja ugovora o poverljivosti (NDA).',
+        'about-highlight-3-title': 'Poštovanje rokova',
+        'about-highlight-3-desc': 'Rok se jasno dogovara pre početka rada — i isporuka stiže u tom roku.',
+
+        // Service Features
+        'feature-literary': 'Književna izvrsnost',
+        'feature-cultural': 'Kulturna autentičnost',
+        'feature-medical-accuracy': 'Medicinska preciznost',
+        'feature-regulatory': 'Regulatorna usklađenost',
+        'feature-technical': 'Tehničko znanje',
+        'feature-precision': 'Zagarantovana preciznost',
+        'feature-versatile': 'Svestrana ekspertiza',
+        'feature-reliable': 'Pouzdan kvalitet',
+        'feature-legal-accuracy': 'Pravna preciznost',
+        'feature-confidentiality': 'Zagarantovana poverljivost',
+        'feature-industry-expertise': 'Poznavanje industrije',
+        'feature-technical-accuracy': 'Tehnička tačnost',
+
+        // Portfolio Section
+        'portfolio-title': 'Oblasti rada',
+        'portfolio-subtitle': 'Tipovi projekata koje prevodim',
+        'portfolio-book-title': 'Prevođenje romana i proze',
+        'portfolio-book-desc': 'Prevođenje savremene proze između srpskog i engleskog, uz čuvanje književnog stila i kulturnog konteksta za međunarodnu publiku.',
+        'portfolio-pharma-title': 'Farmaceutska dokumentacija',
+        'portfolio-pharma-desc': 'Prevođenje informacija o lekovima, dokumentacije kliničkih ispitivanja i regulatornih materijala za farmaceutske kompanije.',
+        'portfolio-technical-title': 'Tehnička uputstva i priručnici',
+        'portfolio-technical-desc': 'Prevođenje korisničkih priručnika za industrijske mašine i bezbednosnih uputstava sa engleskog na srpski.',
+
+        // Tags
+        'tag-literary': 'Književno',
+        'tag-sr-en': 'Srpski–engleski',
+        'tag-fiction': 'Beletristika',
+        'tag-pharmaceutical': 'Farmacija',
+        'tag-en-sr': 'Engleski–srpski',
+        'tag-regulatory': 'Regulatorno',
+        'tag-technical': 'Tehničko',
+        'tag-manuals': 'Priručnici',
+
+        // Contact Section
+        'contact-title': 'Kontaktirajte me',
+        'contact-description': 'Pošaljite dokument ili opišite projekat — dobićete besplatnu, neobavezujuću procenu cene i roka u roku od 24 časa.',
+        'contact-email-label': 'Email',
+        'contact-phone-label': 'Telefon',
+        'contact-chat-label': 'Brze poruke',
+        'btn-whatsapp': 'WhatsApp',
+        'btn-viber': 'Viber',
+        'contact-hours-label': 'Radno vreme',
+        'contact-hours-weekday': 'Ponedeljak – petak: 9:00 – 18:00',
+        'contact-hours-weekend': 'Vikend: dostupno po dogovoru',
+
+        // Form
+        'form-name-label': 'Ime *',
+        'form-email-label': 'Email *',
+        'form-service-label': 'Tip usluge',
+        'form-service-placeholder': 'Izaberite uslugu',
+        'form-service-books': 'Prevođenje knjiga',
+        'form-service-medical': 'Medicina i farmacija',
+        'form-service-technical': 'Tehnička uputstva',
+        'form-service-legal': 'Pravni dokumenti',
+        'form-service-it': 'Mašinstvo i IT',
+        'form-service-general': 'Opšte prevođenje',
+        'form-service-other': 'Ostalo',
+        'form-message-label': 'Poruka *',
+        'form-name-placeholder': 'Unesite vaše ime',
+        'form-email-placeholder': 'Unesite vaš email',
+        'form-message-placeholder': 'Opišite vaš projekat ili postavite pitanje...',
+        'form-attachment-label': 'Prilog (opciono)',
+        'form-attachment-help': 'PDF, Word ili tekstualni fajlovi (najviše 10 MB)',
+        'form-submit-btn': 'Pošaljite poruku',
+
+        // Footer
+        'footer-description': 'Profesionalne prevodilačke usluge za srpski i engleski jezik — knjige, medicina, tehnika i pravo.',
+        'footer-services-heading': 'Usluge',
+        'footer-books-link': 'Prevođenje knjiga',
+        'footer-medical-link': 'Medicina i farmacija',
+        'footer-technical-link': 'Tehnička uputstva',
+        'footer-legal-link': 'Pravni dokumenti',
+        'footer-it-link': 'Mašinstvo i IT',
+        'footer-general-link': 'Opšte prevođenje',
+        'footer-company-heading': 'Informacije',
+        'footer-about-link': 'O meni',
+        'footer-portfolio-link': 'Portfolio',
+        'footer-contact-link': 'Kontakt',
+        'footer-privacy-link': 'Politika privatnosti',
+        'footer-copyright': '&copy; 2026 Karolina Lukač — Prevodi. Sva prava zadržana.',
+
+        // Process Section
+        'process-badge': 'Kako funkcioniše',
+        'process-title': 'Proces prevođenja',
+        'process-subtitle': 'Jednostavan i efikasan radni tok',
+        'step-1-title': 'Konsultacija',
+        'step-1-desc': 'Razgovaramo o zahtevima projekta, roku i specifičnim potrebama, kako bismo osigurali potpuno razumevanje.',
+        'step-2-title': 'Ponuda i dogovor',
+        'step-2-desc': 'Dobijate jasnu ponudu sa cenom i rokom isporuke — bez skrivenih troškova.',
+        'step-3-title': 'Prevođenje',
+        'step-3-desc': 'Profesionalno prevođenje sa pažnjom na kulturni kontekst, terminologiju i doslednost stila.',
+        'step-4-title': 'Provera i isporuka',
+        'step-4-desc': 'Završna provera kvaliteta i isporuka prevedenih dokumenata u željenom formatu, u dogovorenom roku.',
+
+        // FAQ Section
+        'faq-badge': 'Česta pitanja',
+        'faq-title': 'Imate pitanja?',
+        'faq-subtitle': 'Sve što treba da znate o saradnji',
+        'faq-1-question': 'Između kojih jezika prevodite?',
+        'faq-1-answer': 'Specijalizovana sam za srpsko-engleske i englesko-srpske prevode. Ova fokusirana ekspertiza omogućava prevode najvišeg kvaliteta, sa dubokim kulturnim razumevanjem i preciznom terminologijom.',
+        'faq-2-question': 'Koliko traje tipičan prevod?',
+        'faq-2-answer': 'Rok zavisi od dužine i složenosti dokumenta. Tipično, 1–5 stranica traje 2–3 dana, dok veći projekti mogu zahtevati 1–2 nedelje. Tačan rok uvek dobijate unapred, uz ponudu.',
+        'faq-3-question': 'Da li radite prevode za službenu upotrebu?',
+        'faq-3-answer': 'Radim prevode pravnih i zvaničnih dokumenata uz izjavu o tačnosti prevoda. Ako vam je potrebna i overa sudskog tumača, kontaktirajte me — pomoći ću vam da pronađete pravo rešenje za vaš slučaj.',
+        'faq-4-question': 'Koliko košta prevod?',
+        'faq-4-answer': 'Cena zavisi od obima, oblasti i roka, a obračunava se po prevodilačkoj strani (1.800 karaktera sa razmacima). Pošaljite dokument i dobićete besplatnu, neobavezujuću procenu u roku od 24 časa.',
+        'faq-5-question': 'U kojim oblastima ste specijalizovani?',
+        'faq-5-answer': 'Glavne specijalizacije su književna dela (beletristika i publicistika), medicinska i farmaceutska dokumentacija, tehnička uputstva i poslovni dokumenti.',
+        'faq-6-question': 'Kako osiguravate kvalitet prevoda?',
+        'faq-6-answer': 'Proces obuhvata istraživanje terminologije, kulturnu adaptaciju i više faza provere. Svaki prevod prolazi završnu lekturu radi tačnosti i doslednosti stila.',
+
+        // CTA Section
+        'cta-title': 'Spremni da srušite jezičke barijere?',
+        'cta-subtitle': 'Pošaljite dokument danas — besplatna procena stiže u roku od 24 časa.',
+        'cta-get-started': 'Zatražite ponudu',
+        'cta-learn-more': 'Saznajte više',
+        'cta-fast': 'Odgovor u roku od 24 časa',
+        'cta-secure': 'Bezbedno i poverljivo',
+        'cta-quality': 'Garantovan kvalitet'
+    },
+
     en: {
         // Navigation
         'nav-home': 'Home',
@@ -8,17 +174,18 @@ const translations = {
         'nav-about': 'About',
         'nav-portfolio': 'Portfolio',
         'nav-contact': 'Contact',
-        
+
         // Hero Section
-        'hero-title': 'Serbian-English <span class="highlight">Translation Expert</span>',
-        'hero-subtitle': 'Specialized translation services for books, medical documents, and technical materials with cultural precision.',
-        'btn-get-quote': 'Get Quote',
+        'hero-badge': 'Free quote within 24 hours',
+        'hero-title': 'Expert <span class="highlight">Serbian–English</span> translations',
+        'hero-subtitle': 'Specialized translation of books, medical documentation and technical materials — accurate, confidential and always on time.',
+        'btn-get-quote': 'Get a Quote',
         'btn-view-work': 'View Work',
-        
+
         // Services Section
-        'services-badge': 'What We Do',
-        'services-title': 'Our Services',
-        'services-subtitle': 'Specialized Serbian-English translation services',
+        'services-badge': 'What I Do',
+        'services-title': 'Services',
+        'services-subtitle': 'Specialized translation services for Serbian and English',
         'service-books-title': 'Book Translation',
         'service-books-desc': 'Professional translation of fiction and non-fiction books, preserving the author\'s voice and cultural nuances between Serbian and English.',
         'service-medical-title': 'Medical & Pharmaceutical',
@@ -26,27 +193,24 @@ const translations = {
         'service-technical-title': 'Technical Manuals',
         'service-technical-desc': 'Accurate translation of machine manuals, technical specifications, user guides, and engineering documentation with proper technical terminology.',
         'service-general-title': 'General Translation',
-        'service-general-desc': 'Comprehensive Serbian-English translation services for various document types including legal, business, and academic materials.',
+        'service-general-desc': 'Comprehensive translation services for various document types including legal, business, and academic materials.',
         'service-legal-title': 'Legal Documents',
         'service-legal-desc': 'Professional translation of legal documents, contracts, court papers, immigration documents, and official certificates with legal terminology accuracy.',
         'service-it-title': 'Engineering & IT',
         'service-it-desc': 'Specialized translation for engineering, construction, and IT sectors including technical specifications, software documentation, and architectural plans.',
-        
+
         // About Section
         'about-badge': 'About Me',
         'about-title': 'About Karolina',
-        'about-subtitle': 'Passionate about bridging cultures through language',
-        'about-description': 'I\'m a professional translator with years of experience in bridging communication gaps between languages and cultures. My passion for languages and attention to detail ensures that every translation maintains the original meaning, tone, and cultural nuances.',
-        'stat-projects-number': '500+',
-        'stat-projects-label': 'Projects Completed',
-        'stat-langs-number': '15+',
-        'stat-langs-label': 'Language Pairs',
-        'stat-satisfaction-number': '98%',
-        'stat-satisfaction-label': 'Client Satisfaction',
-        'skills-title': 'Language Expertise',
-        'skill-english': 'English',
-        'skill-serbian': 'Serbian',
-        
+        'about-subtitle': 'Bridging cultures through language',
+        'about-description': 'I\'m a professional translator with years of experience in bridging language and cultural gaps. My passion for languages and attention to detail ensure that every translation keeps the original meaning, tone, and cultural nuances.',
+        'about-highlight-1-title': 'Focused specialization',
+        'about-highlight-1-desc': 'Working exclusively with the Serbian–English language pair means deeper knowledge of the terminology and culture of both languages.',
+        'about-highlight-2-title': 'Confidentiality',
+        'about-highlight-2-desc': 'All documents are treated as strictly confidential, with an NDA available on request.',
+        'about-highlight-3-title': 'Deadlines respected',
+        'about-highlight-3-desc': 'The deadline is agreed before work begins — and delivery arrives on time.',
+
         // Service Features
         'feature-literary': 'Literary Excellence',
         'feature-cultural': 'Cultural Authenticity',
@@ -60,36 +224,39 @@ const translations = {
         'feature-confidentiality': 'Confidentiality Assured',
         'feature-industry-expertise': 'Industry Expertise',
         'feature-technical-accuracy': 'Technical Accuracy',
-        
+
         // Portfolio Section
-        'portfolio-title': 'Recent Projects',
-        'portfolio-subtitle': 'Showcasing specialized translation work',
-        'portfolio-book-title': 'Fiction Novel Translation',
-        'portfolio-book-desc': 'Complete translation of a contemporary Serbian fiction novel into English, preserving literary style and cultural context for international readership.',
+        'portfolio-title': 'Areas of Work',
+        'portfolio-subtitle': 'Types of projects I translate',
+        'portfolio-book-title': 'Fiction & Prose Translation',
+        'portfolio-book-desc': 'Translation of contemporary prose between Serbian and English, preserving literary style and cultural context for international readers.',
         'portfolio-pharma-title': 'Pharmaceutical Documentation',
-        'portfolio-pharma-desc': 'Translation of pharmaceutical product information, clinical trial documentation, and regulatory compliance materials for international pharmaceutical companies.',
-        'portfolio-technical-title': 'Machine Manual Translation',
-        'portfolio-technical-desc': 'Technical translation of industrial machinery user manuals and safety instructions from English to Serbian for manufacturing facility implementation.',
-        
+        'portfolio-pharma-desc': 'Translation of medicine information, clinical trial documentation, and regulatory materials for pharmaceutical companies.',
+        'portfolio-technical-title': 'Technical Manuals & Guides',
+        'portfolio-technical-desc': 'Translation of user manuals for industrial machinery and safety instructions from English into Serbian.',
+
         // Tags
         'tag-literary': 'Literary',
-        'tag-sr-en': 'Serbian-English',
+        'tag-sr-en': 'Serbian–English',
         'tag-fiction': 'Fiction',
         'tag-pharmaceutical': 'Pharmaceutical',
-        'tag-en-sr': 'English-Serbian',
+        'tag-en-sr': 'English–Serbian',
         'tag-regulatory': 'Regulatory',
         'tag-technical': 'Technical',
         'tag-manuals': 'Manuals',
-        
+
         // Contact Section
         'contact-title': 'Get in Touch',
-        'contact-description': 'Ready to break down language barriers? Contact me for a free consultation and quote for your translation needs.',
+        'contact-description': 'Send your document or describe your project — you\'ll receive a free, no-obligation quote with price and deadline within 24 hours.',
         'contact-email-label': 'Email',
         'contact-phone-label': 'Phone',
+        'contact-chat-label': 'Quick Chat',
+        'btn-whatsapp': 'WhatsApp',
+        'btn-viber': 'Viber',
         'contact-hours-label': 'Business Hours',
-        'contact-hours-weekday': 'Monday - Friday: 9:00 - 18:00',
-        'contact-hours-weekend': 'Weekend: Available by appointment',
-        
+        'contact-hours-weekday': 'Monday – Friday: 9:00 – 18:00',
+        'contact-hours-weekend': 'Weekend: available by appointment',
+
         // Form
         'form-name-label': 'Name *',
         'form-email-label': 'Email *',
@@ -105,13 +272,13 @@ const translations = {
         'form-message-label': 'Message *',
         'form-name-placeholder': 'Enter your name',
         'form-email-placeholder': 'Enter your email',
-        'form-message-placeholder': 'Enter your message...',
-        'form-attachment-label': 'Attachment (Optional)',
-        'form-attachment-help': 'PDF, Word, or text files (max 10MB)',
+        'form-message-placeholder': 'Describe your project or ask a question...',
+        'form-attachment-label': 'Attachment (optional)',
+        'form-attachment-help': 'PDF, Word, or text files (max 10 MB)',
         'form-submit-btn': 'Send Message',
-        
+
         // Footer
-        'footer-description': 'Professional Serbian-English translation services connecting languages and cultures worldwide.',
+        'footer-description': 'Professional Serbian–English translation services — books, medical, technical and legal.',
         'footer-services-heading': 'Services',
         'footer-books-link': 'Book Translation',
         'footer-medical-link': 'Medical & Pharmaceutical',
@@ -119,27 +286,13 @@ const translations = {
         'footer-legal-link': 'Legal Documents',
         'footer-it-link': 'Engineering & IT',
         'footer-general-link': 'General Translation',
-        'footer-company-heading': 'Company',
+        'footer-company-heading': 'Information',
         'footer-about-link': 'About',
         'footer-portfolio-link': 'Portfolio',
         'footer-contact-link': 'Contact',
         'footer-privacy-link': 'Privacy Policy',
-        'footer-copyright': '&copy; 2024 Karolina Prevodi. All rights reserved.',
-        
-        // Testimonials Section
-        'testimonials-badge': 'Client Testimonials',
-        'testimonials-title': 'What Clients Say',
-        'testimonials-subtitle': 'Real feedback from satisfied clients',
-        'testimonial-1-text': 'Karolina\'s translation of our medical documentation was exceptional. Her attention to detail and understanding of complex terminology saved us weeks of work.',
-        'testimonial-1-name': 'Medical Director',
-        'testimonial-1-title': 'Leading Healthcare Company',
-        'testimonial-2-text': 'The literary translation Karolina provided for our novel was beautiful. She captured the essence and cultural nuances perfectly.',
-        'testimonial-2-name': 'Publishing Director',
-        'testimonial-2-title': 'International Publishing House',
-        'testimonial-3-text': 'Technical manuals translated with precision and accuracy. Karolina understands engineering terminology and delivers on time.',
-        'testimonial-3-name': 'Technical Manager',
-        'testimonial-3-title': 'Engineering Corporation',
-        
+        'footer-copyright': '&copy; 2026 Karolina Lukač — Prevodi. All rights reserved.',
+
         // Process Section
         'process-badge': 'How It Works',
         'process-title': 'Translation Process',
@@ -147,240 +300,65 @@ const translations = {
         'step-1-title': 'Consultation',
         'step-1-desc': 'We discuss your project requirements, timeline, and specific needs to ensure perfect understanding.',
         'step-2-title': 'Quote & Agreement',
-        'step-2-desc': 'Receive a detailed quote with timeline and deliverables. Clear terms and competitive pricing.',
+        'step-2-desc': 'You receive a clear quote with price and delivery deadline — no hidden costs.',
         'step-3-title': 'Translation',
         'step-3-desc': 'Professional translation with attention to cultural context, terminology, and style consistency.',
         'step-4-title': 'Review & Delivery',
-        'step-4-desc': 'Quality assurance review and timely delivery of your translated documents in your preferred format.',
-        
+        'step-4-desc': 'Final quality review and delivery of your translated documents in your preferred format, on time.',
+
         // FAQ Section
-        'faq-badge': 'Frequently Asked Questions',
+        'faq-badge': 'FAQ',
         'faq-title': 'Common Questions',
-        'faq-subtitle': 'Everything you need to know about our services',
+        'faq-subtitle': 'Everything you need to know about working together',
         'faq-1-question': 'What languages do you translate between?',
-        'faq-1-answer': 'I specialize in Serbian-English and English-Serbian translations. This focused expertise allows me to provide the highest quality translations with deep cultural understanding and precise terminology.',
+        'faq-1-answer': 'I specialize in Serbian–English and English–Serbian translations. This focused expertise allows me to provide the highest quality translations with deep cultural understanding and precise terminology.',
         'faq-2-question': 'How long does a typical translation take?',
-        'faq-2-answer': 'Turnaround time depends on document length and complexity. Typically, 1-5 pages take 2-3 days, while larger projects may require 1-2 weeks. I always provide clear timelines in our initial consultation.',
-        'faq-3-question': 'Do you provide certified translations?',
-        'faq-3-answer': 'Yes, I provide certified translations for legal documents, immigration papers, and official purposes. All certified translations include a statement of accuracy and my professional credentials.',
-        'faq-4-question': 'What industries do you specialize in?',
-        'faq-4-answer': 'My main specializations include literary works (fiction and non-fiction), medical and pharmaceutical documents, technical manuals, and general business documents. I have extensive experience in each of these areas.',
-        'faq-5-question': 'How do you ensure translation quality?',
-        'faq-5-answer': 'I follow a rigorous quality process including terminology research, cultural adaptation, multiple review stages, and client feedback incorporation. Every translation is proofread for accuracy and style consistency.',
-        
+        'faq-2-answer': 'Turnaround depends on document length and complexity. Typically, 1–5 pages take 2–3 days, while larger projects may require 1–2 weeks. You always get the exact deadline upfront, with the quote.',
+        'faq-3-question': 'Do you translate documents for official use?',
+        'faq-3-answer': 'I translate legal and official documents with a statement of translation accuracy. If you also need a certified court interpreter\'s seal, contact me — I\'ll help you find the right solution for your case.',
+        'faq-4-question': 'How much does a translation cost?',
+        'faq-4-answer': 'The price depends on volume, subject area and deadline, and is calculated per standard page (1,800 characters with spaces). Send your document and you\'ll receive a free, no-obligation quote within 24 hours.',
+        'faq-5-question': 'What fields do you specialize in?',
+        'faq-5-answer': 'My main specializations are literary works (fiction and non-fiction), medical and pharmaceutical documentation, technical manuals, and business documents.',
+        'faq-6-question': 'How do you ensure translation quality?',
+        'faq-6-answer': 'The process includes terminology research, cultural adaptation, and multiple review stages. Every translation goes through a final proofread for accuracy and style consistency.',
+
         // CTA Section
         'cta-title': 'Ready to Break Language Barriers?',
-        'cta-subtitle': 'Get your professional Serbian-English translation today. Fast, accurate, and culturally aware.',
-        'cta-get-started': 'Get Started',
+        'cta-subtitle': 'Send your document today — a free quote arrives within 24 hours.',
+        'cta-get-started': 'Get a Quote',
         'cta-learn-more': 'Learn More',
-        'cta-fast': 'Fast Turnaround',
+        'cta-fast': 'Reply within 24 hours',
         'cta-secure': 'Secure & Confidential',
         'cta-quality': 'Quality Guaranteed'
-    },
-    
-    sr: {
-        // Navigation
-        'nav-home': 'Po\u010detna',
-        'nav-services': 'Usluge',
-        'nav-about': 'O meni',
-        'nav-portfolio': 'Portfolio',
-        'nav-contact': 'Kontakt',
-        
-        // Hero Section
-        'hero-title': 'Srpsko-Engleski <span class="highlight">Ekspert za Prevo\u0111enje</span>',
-        'hero-subtitle': 'Specijalizovane prevodila\u010dke usluge za knjige, medicinske dokumente i tehni\u010dke materijale sa kulturnom precizno\u0161\u0107u.',
-        'btn-get-quote': 'Zatra\u017eite Ponudu',
-        'btn-view-work': 'Pogledajte Rad',
-        
-        // Services Section
-        'services-badge': '\u0160to radimo',
-        'services-title': 'Na\u0161e Usluge',
-        'services-subtitle': 'Specijalizovane prevodila\u010dke usluge srpski-engleski',
-        'service-books-title': 'Prevo\u0111enje Knjiga',
-        'service-books-desc': 'Profesionalno prevo\u0111enje beletristike i non-fiction knjiga, sa \u010duvanjem autorovog glasa i kulturnih nijansi izme\u0111u srpskog i engleskog.',
-        'service-medical-title': 'Medicinsko i Farmaceutsko',
-        'service-medical-desc': 'Specijalizovano prevo\u0111enje medicinskih dokumenata, farmaceutskih materijala, informacija za pacijente i klini\u010dkih istra\u017eivanja sa preciznom medicinskom terminologijom.',
-        'service-technical-title': 'Tehni\u010dki Priru\u010dnici',
-        'service-technical-desc': 'Precizno prevo\u0111enje uputstva za ma\u0161ine, tehni\u010dkih specifikacija, korisni\u010dkih vodi\u010da i in\u017eenjerske dokumentacije sa pravilnom tehni\u010dkom terminologijom.',
-        'service-general-title': 'Op\u0161te Prevo\u0111enje',
-        'service-general-desc': 'Kompletne prevodila\u010dke usluge srpski-engleski za razli\u010dite tipove dokumenata uklju\u010duju\u0107i pravne, poslovne i akademske materijale.',
-        'service-legal-title': 'Pravni Dokumenti',
-        'service-legal-desc': 'Profesionalno prevo\u0111enje pravnih dokumenata, ugovora, sudskih spisa, imigracionih dokumenata i zvani\u010dnih sertifikata sa preciznom pravnom terminologijom.',
-        'service-it-title': 'Ma\u0161instvo & IT',
-        'service-it-desc': 'Specijalizovano prevo\u0111enje za in\u017eenjering, gradjevinu i IT sektore uklju\u010duju\u0107i tehni\u010dke specifikacije, softversku dokumentaciju i arhitektonske planove.',
-        
-        // About Section
-        'about-badge': 'O meni',
-        'about-title': 'O Karolini',
-        'about-subtitle': 'Strastvena u povezivanju kultura kroz jezik',
-        'about-description': 'Profesionalni prevodilac sa godinama iskustva u premo\u0161avanju komunikacijskih jazova izme\u0111u jezika i kultura. Moja strast prema jezicima i pa\u017enja prema detaljima osiguravaju da svaki prevod zadr\u017ei originalno zna\u010denje, ton i kulturne nijanse.',
-        'stat-projects-number': '500+',
-        'stat-projects-label': 'Zavr\u0161enih Projekata',
-        'stat-langs-number': '15+',
-        'stat-langs-label': 'Jezickih Parova',
-        'stat-satisfaction-number': '98%',
-        'stat-satisfaction-label': 'Zadovoljstvo Klijenata',
-        'skills-title': 'Jezici',
-        'skill-english': 'Engleski',
-        'skill-serbian': 'Srpski',
-        
-        // Service Features
-        'feature-literary': 'Knji\u017eevna Izvrsnost',
-        'feature-cultural': 'Kulturna Autenti\u010dnost',
-        'feature-medical-accuracy': 'Medicinska Preciznost',
-        'feature-regulatory': 'Regulatorna Uskla\u010denost',
-        'feature-technical': 'Tehni\u010dko Znanje',
-        'feature-precision': 'Preciznost Zagarantovana',
-        'feature-versatile': 'Svestranost Ekspertize',
-        'feature-reliable': 'Pouzdan Kvalitet',
-        'feature-legal-accuracy': 'Pravna Preciznost',
-        'feature-confidentiality': 'Poverljivost Zagarantovana',
-        'feature-industry-expertise': 'Industrijska Ekspertiza',
-        'feature-technical-accuracy': 'Tehni\u010dka Ta\u010dnost',
-        
-        // Portfolio Section
-        'portfolio-title': 'Nedavni Projekti',
-        'portfolio-subtitle': 'Prikazivanje specijalizovanih prevoda',
-        'portfolio-book-title': 'Prevo\u0111enje Beletristike',
-        'portfolio-book-desc': 'Kompletno prevo\u0111enje savremene srpske beletristike na engleski, sa \u010duvanjem knji\u017eevnog stila i kulturnog konteksta za me\u0111unarodnu publiku.',
-        'portfolio-pharma-title': 'Farmaceutska Dokumentacija',
-        'portfolio-pharma-desc': 'Prevo\u0111enje informacija o proizvodima, dokumentacije klini\u010dkih ispitivanja i materijala za uskla\u010denje sa regulatorima za me\u0111unarodne farmaceutske kompanije.',
-        'portfolio-technical-title': 'Prevo\u0111enje Tehni\u010dkih Priru\u010dnika',
-        'portfolio-technical-desc': 'Tehni\u010dko prevo\u0111enje korisni\u010dkih priru\u010dnika za industrijske ma\u0161ine i sigurnosnih uputstava sa engleskog na srpski za implementaciju u proizvodnim objektima.',
-        
-        // Tags
-        'tag-literary': 'Knji\u017eevno',
-        'tag-sr-en': 'Srpski-Engleski',
-        'tag-fiction': 'Beletristika',
-        'tag-pharmaceutical': 'Farmaceutsko',
-        'tag-en-sr': 'Engleski-Srpski',
-        'tag-regulatory': 'Regulatorno',
-        'tag-technical': 'Tehni\u010dko',
-        'tag-manuals': 'Priru\u010dnici',
-        
-        // Contact Section
-        'contact-title': 'Kontaktirajte Nas',
-        'contact-description': 'Spremni da sru\u0161ite jezi\u010dke barijere? Kontaktirajte me za besplatnu konsultaciju i ponudu za va\u0161e prevodila\u010dke potrebe.',
-        'contact-email-label': 'Email',
-        'contact-phone-label': 'Telefon',
-        'contact-hours-label': 'Radno Vreme',
-        'contact-hours-weekday': 'Ponedeljak - Petak: 9:00 - 18:00',
-        'contact-hours-weekend': 'Vikend: Dostupno po dogovoru',
-        
-        // Form
-        'form-name-label': 'Ime *',
-        'form-email-label': 'Email *',
-        'form-service-label': 'Tip Usluge',
-        'form-service-placeholder': 'Izaberite uslugu',
-        'form-service-books': 'Prevo\u0111enje Knjiga',
-        'form-service-medical': 'Medicinsko i Farmaceutsko',
-        'form-service-technical': 'Tehni\u010dki Priru\u010dnici',
-        'form-service-legal': 'Pravni Dokumenti',
-        'form-service-it': 'Ma\u0161instvo & IT',
-        'form-service-general': 'Op\u0161te Prevo\u0111enje',
-        'form-service-other': 'Ostalo',
-        'form-message-label': 'Poruka *',
-        'form-name-placeholder': 'Unesite va\u0161e ime',
-        'form-email-placeholder': 'Unesite va\u0161 email',
-        'form-message-placeholder': 'Unesite va\u0161u poruku...',
-        'form-attachment-label': 'Prilog (Opciono)',
-        'form-attachment-help': 'PDF, Word ili tekstualni fajlovi (max 10MB)',
-        'form-submit-btn': 'Po\u0161aljite Poruku',
-        
-        // Footer
-        'footer-description': 'Profesionalne prevodila\u010dke usluge srpski-engleski koje povezuju jezike i kulture \u0161irom sveta.',
-        'footer-services-heading': 'Usluge',
-        'footer-books-link': 'Prevo\u0111enje Knjiga',
-        'footer-medical-link': 'Medicinsko i Farmaceutsko',
-        'footer-technical-link': 'Tehni\u010dki Priru\u010dnici',
-        'footer-legal-link': 'Pravni Dokumenti',
-        'footer-it-link': 'Ma\u0161instvo & IT',
-        'footer-general-link': 'Op\u0161te Prevo\u0111enje',
-        'footer-company-heading': 'Kompanija',
-        'footer-about-link': 'O meni',
-        'footer-portfolio-link': 'Portfolio',
-        'footer-contact-link': 'Kontakt',
-        'footer-privacy-link': 'Politika Privatnosti',
-        'footer-copyright': '&copy; 2024 Karolina Prevodi. Sva prava zadr\u017eena.',
-        
-        // Testimonials Section
-        'testimonials-badge': 'Reference Klijenata',
-        'testimonials-title': '\u0160to Klijenti Ka\u017eu',
-        'testimonials-subtitle': 'Stvarni utisci od zadovoljnih klijenata',
-        'testimonial-1-text': 'Karolinin prevod na\u0161e medicinske dokumentacije bio je izvanredan. Njena pa\u017enja prema detaljima i razumevanje slo\u017eene terminologije u\u0161tedela nam je nedeljama rada.',
-        'testimonial-1-name': 'Medicinski Direktor',
-        'testimonial-1-title': 'Vode\u0107a Zdravstvena Kompanija',
-        'testimonial-2-text': 'Knji\u017eevni prevod koji nam je Karolina pru\u017eila za roman bio je prelep. Uhvatila je su\u0161tinu i kulturne nijanse savr\u0161eno.',
-        'testimonial-2-name': 'Izdava\u010dki Direktor',
-        'testimonial-2-title': 'Me\u0111unarodna Izdava\u010dka Ku\u0107a',
-        'testimonial-3-text': 'Tehni\u010dki priru\u010dnici prevedeni sa precizno\u0161\u0107u i ta\u010dno\u0161\u0107u. Karolina razume in\u017eenjersku terminologiju i isporu\u010duje na vreme.',
-        'testimonial-3-name': 'Tehni\u010dki Menad\u017eer',
-        'testimonial-3-title': 'In\u017eenjerska Korporacija',
-        
-        // Process Section
-        'process-badge': 'Kako Funkioni\u0161e',
-        'process-title': 'Proces Prevo\u0111enja',
-        'process-subtitle': 'Jednostavan i efikasan radni tok',
-        'step-1-title': 'Konsultacija',
-        'step-1-desc': 'Razgovaramo o zahtevima va\u0161eg projekta, roku i specifi\u010dnim potrebama da bismo osigurali savr\u0161eno razumevanje.',
-        'step-2-title': 'Ponuda i Ugovor',
-        'step-2-desc': 'Dobijate detaljnu ponudu sa rokovima i isporukama. Jasni uslovi i konkurentna cena.',
-        'step-3-title': 'Prevo\u0111enje',
-        'step-3-desc': 'Profesionalno prevo\u0111enje sa pa\u017enjom na kulturni kontekst, terminologiju i doslednost stila.',
-        'step-4-title': 'Provera i Isporuka',
-        'step-4-desc': 'Provera kvaliteta i pravovremena isporuka va\u0161ih prevedenih dokumenata u \u017eeljenom formatu.',
-        
-        // FAQ Section
-        'faq-badge': '\u010cesto Postavljena Pitanja',
-        'faq-title': 'Uobi\u010dajena Pitanja',
-        'faq-subtitle': 'Sve \u0161to trebate da znate o na\u0161im uslugama',
-        'faq-1-question': 'Izme\u0111u kojih jezika prevodite?',
-        'faq-1-answer': 'Specijalizujem se za srpsko-engleske i englesko-srpske prevode. Ova fokusirana ekspertiza mi omogu0107ava da pru\u017eim prevode najvi\u0161eg kvaliteta sa dubokim kulturnim razumevanjem i preciznom terminologijom.',
-        'faq-2-question': 'Koliko traje tipi\u010dan prevod?',
-        'faq-2-answer': 'Vreme isporuke zavisi od du\u017eine i slo\u017eenosti dokumenta. Tipi\u010dno, 1-5 stranica traje 2-3 dana, dok ve\u0107i projekti mogu zahtevati 1-2 nedelje. Uvek pru\u017eam jasne rokove u na\u0161oj po\u010detnoj konsultaciji.',
-        'faq-3-question': 'Da li pru\u017eate sertifikovane prevode?',
-        'faq-3-answer': 'Da, pru\u017eam sertifikovane prevode za pravne dokumente, imigraciona papire i zvani\u010dne svrhe. Svi sertifikovani prevodi uklju\u010duju izjavu o ta\u010dnosti i moje profesionalne kredencijale.',
-        'faq-4-question': 'U kojim industrijama se specijalizujete?',
-        'faq-4-answer': 'Moje glavne specijalizacije uklju\u010duju knji\u017eevna dela (beletristika i non-fiction), medicinske i farmaceutske dokumente, tehni\u010dke priru\u010dnike i op\u0161te poslovne dokumente. Imam ekstenzivno iskustvo u svakoj od ovih oblasti.',
-        'faq-5-question': 'Kako osiguravate kvalitet prevoda?',
-        'faq-5-answer': 'Pratim strogi proces kvaliteta uklju\u010duju\u0107i istra\u017eivanje terminologije, kulturnu adaptaciju, vi\u0161e faza provere i uklju\u010divanje povratnih informacija klijenata. Svaki prevod je proveren za ta\u010dnost i doslednost stila.',
-        
-        // CTA Section
-        'cta-title': 'Spremni da Sru\u0161ite Jezi\u010dke Barijere?',
-        'cta-subtitle': 'Naru\u010dite va\u0161 profesionalni srpsko-engleski prevod danas. Brz, ta\u010dan i kulturno svestan.',
-        'cta-get-started': 'Zapo\u010dnite',
-        'cta-learn-more': 'Saznajte Vi\u0161e',
-        'cta-fast': 'Brza Isporuka',
-        'cta-secure': 'Bezbedno i Poverljivo',
-        'cta-quality': 'Kvalitet Zagarantovan'
     }
 };
 
 // Language Switcher Class
 class LanguageSwitcher {
     constructor() {
-        this.currentLang = localStorage.getItem('selectedLanguage') || 'en';
+        this.currentLang = localStorage.getItem('selectedLanguage') || 'sr';
         this.init();
     }
-    
+
     init() {
         this.setupEventListeners();
         this.translatePage(this.currentLang);
         this.updateLanguageButton();
+        this.updateActiveOption(this.currentLang);
+        this.updateDocumentMeta(this.currentLang);
     }
-    
+
     setupEventListeners() {
-        // Language button click
         const languageBtn = document.getElementById('languageBtn');
         const languageDropdown = document.getElementById('languageDropdown');
-        
+
         if (languageBtn && languageDropdown) {
             languageBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
                 languageDropdown.classList.toggle('show');
             });
-            
-            // Language option clicks
+
             const languageOptions = languageDropdown.querySelectorAll('.language-option');
             languageOptions.forEach(option => {
                 option.addEventListener('click', (e) => {
@@ -390,14 +368,14 @@ class LanguageSwitcher {
                     languageDropdown.classList.remove('show');
                 });
             });
-            
+
             // Close dropdown when clicking outside
             document.addEventListener('click', () => {
                 languageDropdown.classList.remove('show');
             });
         }
     }
-    
+
     switchLanguage(lang) {
         if (lang !== this.currentLang) {
             this.currentLang = lang;
@@ -405,59 +383,32 @@ class LanguageSwitcher {
             this.translatePage(lang);
             this.updateLanguageButton();
             this.updateActiveOption(lang);
-            
-            // Update HTML lang attribute
-            document.documentElement.lang = lang === 'sr' ? 'sr-RS' : 'en';
-            
-            // Update page title
-            this.updatePageTitle(lang);
+            this.updateDocumentMeta(lang);
         }
     }
-    
+
     translatePage(lang) {
         const elements = document.querySelectorAll('[data-translate]');
-        
+
         elements.forEach(element => {
             const key = element.dataset.translate;
             const translation = translations[lang]?.[key];
-            
+
             if (translation) {
                 // Handle HTML content for elements that can contain HTML
-                if (element.tagName === 'H1' || element.tagName === 'H2' || element.tagName === 'H3' || 
-                    element.tagName === 'P' || element.tagName === 'SPAN' || element.tagName === 'A') {
+                if (['H1', 'H2', 'H3', 'P', 'SPAN', 'A'].includes(element.tagName)) {
                     element.innerHTML = translation;
                 } else {
                     element.textContent = translation;
                 }
             }
         });
-        
-        // Update form placeholders and attributes
+
         this.updateFormElements(lang);
-        
-        // Trigger custom event for other scripts
         document.dispatchEvent(new CustomEvent('languageChanged', { detail: { language: lang } }));
     }
-    
+
     updateFormElements(lang) {
-        // Update form placeholders using translations
-        const nameInput = document.getElementById('name');
-        const emailInput = document.getElementById('email');
-        const messageTextarea = document.getElementById('message');
-        
-        if (nameInput) {
-            nameInput.placeholder = translations[lang]?.['form-name-placeholder'] || '';
-        }
-        
-        if (emailInput) {
-            emailInput.placeholder = translations[lang]?.['form-email-placeholder'] || '';
-        }
-        
-        if (messageTextarea) {
-            messageTextarea.placeholder = translations[lang]?.['form-message-placeholder'] || '';
-        }
-        
-        // Update elements with data-translate-placeholder attribute
         const placeholderElements = document.querySelectorAll('[data-translate-placeholder]');
         placeholderElements.forEach(element => {
             const key = element.dataset.translatePlaceholder;
@@ -467,33 +418,36 @@ class LanguageSwitcher {
             }
         });
     }
-    
+
     updateLanguageButton() {
         const currentLangSpan = document.querySelector('.current-lang');
         if (currentLangSpan) {
             currentLangSpan.textContent = this.currentLang.toUpperCase();
         }
     }
-    
+
     updateActiveOption(lang) {
         const options = document.querySelectorAll('.language-option');
         options.forEach(option => {
             option.classList.toggle('active', option.dataset.lang === lang);
         });
     }
-    
-    updatePageTitle(lang) {
-        const title = lang === 'sr' 
-            ? 'Karolina Prevodi - Profesionalne Usluge Prevo\u0111enja'
-            : 'Karolina Prevodi - Professional Translation Services';
-        document.title = title;
-        
-        // Update meta description
+
+    updateDocumentMeta(lang) {
+        // <html lang="...">
+        document.documentElement.lang = lang === 'sr' ? 'sr' : 'en';
+
+        // Page title
+        document.title = lang === 'sr'
+            ? 'Karolina Lukač — Prevodilac za srpski i engleski | Karolina Prevodi'
+            : 'Karolina Lukač — Serbian-English Translator | Karolina Prevodi';
+
+        // Meta description
         const metaDescription = document.querySelector('meta[name="description"]');
         if (metaDescription) {
             metaDescription.content = lang === 'sr'
-                ? 'Profesionalne prevodila\u010dke usluge od Karoline. Prevodi visokog kvaliteta za dokumente, veb sajtove i vi\u0161e.'
-                : 'Professional translation services by Karolina. High-quality translations for documents, websites, and more.';
+                ? 'Profesionalni prevodi srpski-engleski: knjige, medicinska dokumentacija, tehnička uputstva i pravni dokumenti. Besplatna procena u roku od 24 časa.'
+                : 'Professional Serbian-English translation: books, medical documentation, technical manuals and legal documents. Free quote within 24 hours.';
         }
     }
 }

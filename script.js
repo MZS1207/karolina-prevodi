@@ -1,387 +1,200 @@
-// Mobile Menu Toggle
+// Karolina Prevodi — site scripts
+
 document.addEventListener('DOMContentLoaded', () => {
+    const currentLang = () => localStorage.getItem('selectedLanguage') || 'sr';
+
+    // ---------- Mobile menu ----------
     const mobileMenu = document.getElementById('mobile-menu');
     const navMenu = document.querySelector('.nav-menu');
-    
+
     if (mobileMenu && navMenu) {
-        // Handle both click and touch events
-        const toggleMenu = (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            mobileMenu.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        };
-        
-        mobileMenu.addEventListener('click', toggleMenu);
-        mobileMenu.addEventListener('touchstart', toggleMenu);
-        mobileMenu.addEventListener('touchend', toggleMenu);
-        
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                navMenu.classList.remove('active');
-            });
+        mobileMenu.addEventListener('click', () => {
+            const open = navMenu.classList.toggle('active');
+            mobileMenu.classList.toggle('active', open);
+            mobileMenu.setAttribute('aria-expanded', String(open));
         });
-        
-        // Close mobile menu when clicking outside
+
+        const closeMenu = () => {
+            mobileMenu.classList.remove('active');
+            navMenu.classList.remove('active');
+            mobileMenu.setAttribute('aria-expanded', 'false');
+        };
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+
         document.addEventListener('click', (e) => {
             if (!mobileMenu.contains(e.target) && !navMenu.contains(e.target)) {
-                mobileMenu.classList.remove('active');
-                navMenu.classList.remove('active');
+                closeMenu();
             }
         });
     }
-});
 
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
-});
-
-// Active navigation link on scroll
-window.addEventListener('scroll', () => {
-    let current = '';
-    const sections = document.querySelectorAll('section');
-    
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (scrollY >= (sectionTop - 200)) {
-            current = section.getAttribute('id');
-        }
-    });
-
-    document.querySelectorAll('.nav-link').forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').slice(1) === current) {
-            link.classList.add('active');
-        }
-    });
-});
-
-// Scroll Reveal Animation
-const revealElements = document.querySelectorAll('.reveal');
-
-function reveal() {
-    revealElements.forEach(element => {
-        const windowHeight = window.innerHeight;
-        const elementTop = element.getBoundingClientRect().top;
-        const elementVisible = 150;
-
-        if (elementTop < windowHeight - elementVisible) {
-            element.classList.add('active');
-        }
-    });
-}
-
-window.addEventListener('scroll', reveal);
-reveal(); // Initial check
-
-// Contact Form Handler
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-    contactForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        
-        const formData = new FormData(contactForm);
-        const data = Object.fromEntries(formData);
-        
-        // Validate form
-        const errors = validateForm(data);
-        if (errors.length > 0) {
-            showMessage(errors.join('\n'), 'error');
-            return;
-        }
-        
-        // Show loading state
-        const submitButton = contactForm.querySelector('button[type="submit"]');
-        const originalText = submitButton.textContent;
-        const currentLang = localStorage.getItem('selectedLanguage') || 'en';
-        const sendingText = currentLang === 'sr' ? 'Slanje...' : 'Sending...';
-        submitButton.textContent = sendingText;
-        submitButton.disabled = true;
-        
-        try {
-            // Submit form to Formspree
-            const response = await fetch(contactForm.action, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            });
-            
-            if (response.ok) {
-                // Show success message
-                const successMessage = currentLang === 'sr' 
-                    ? 'Poruka je uspe\u0161no poslata! Javi\u0107u vam se uskoro.'
-                    : 'Message sent successfully! I\'ll get back to you soon.';
-                showMessage(successMessage, 'success');
-                contactForm.reset();
-            } else {
-                throw new Error('Form submission failed');
-            }
-            
-        } catch (error) {
-            console.error('Formspree error:', error);
-            // Show error message
-            const errorMessage = currentLang === 'sr'
-                ? 'Na\u017ealost, do\u0161lo je do gre\u0161ke pri slanju poruke. Poku\u0161ajte ponovo.'
-                : 'Sorry, there was an error sending your message. Please try again.';
-            showMessage(errorMessage, 'error');
-        } finally {
-            // Reset button state
-            submitButton.textContent = originalText;
-            submitButton.disabled = false;
-        }
-    });
-}
-
-// Formspree handles email sending automatically
-
-// Show message function
-function showMessage(message, type) {
-    // Remove any existing messages
-    const existingMessage = document.querySelector('.message');
-    if (existingMessage) {
-        existingMessage.remove();
-    }
-    
-    // Create message element
-    const messageDiv = document.createElement('div');
-    messageDiv.className = `message ${type}-message`;
-    messageDiv.textContent = message;
-    
-    // Insert before the form
-    const form = document.getElementById('contactForm');
-    form.parentNode.insertBefore(messageDiv, form);
-    
-    // Remove message after 5 seconds
-    setTimeout(() => {
-        if (messageDiv.parentNode) {
-            messageDiv.remove();
-        }
-    }, 5000);
-}
-
-// Animate stats numbers
-function animateStats() {
-    const stats = document.querySelectorAll('.stat-number');
-    
-    stats.forEach(stat => {
-        const target = parseInt(stat.textContent);
-        const duration = 2000; // 2 seconds
-        const increment = target / (duration / 16); // 60fps
-        let current = 0;
-        
-        const updateCounter = () => {
-            current += increment;
-            if (current < target) {
-                stat.textContent = Math.floor(current) + (stat.textContent.includes('+') ? '+' : '');
-                requestAnimationFrame(updateCounter);
-            } else {
-                stat.textContent = target + (stat.textContent.includes('+') ? '+' : '');
-            }
-        };
-        
-        // Start animation when element is in view
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    updateCounter();
-                    observer.unobserve(entry.target);
-                }
-            });
-        });
-        
-        observer.observe(stat);
-    });
-}
-
-// Initialize stats animation
-animateStats();
-
-// Animate skill bars - Simple version
-function animateSkills() {
-    const skillBars = document.querySelectorAll('.skill-progress');
-    
-    // Animate immediately when page loads
-    setTimeout(() => {
-        skillBars.forEach(bar => {
-            const skill = bar.dataset.skill;
-            if (skill) {
-                bar.style.width = skill + '%';
-            }
-        });
-    }, 500);
-}
-
-// Also animate when skills section becomes visible
-const skillsSection = document.querySelector('.about-skills');
-if (skillsSection) {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const skillBars = entry.target.querySelectorAll('.skill-progress');
-                skillBars.forEach((bar, index) => {
-                    setTimeout(() => {
-                        const skill = bar.dataset.skill;
-                        if (skill) {
-                            bar.style.width = skill + '%';
-                        }
-                    }, index * 200);
-                });
-                observer.unobserve(entry.target);
+    // ---------- Smooth scrolling (skip empty "#" anchors) ----------
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (!href || href === '#') return;
+            const target = document.querySelector(href);
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         });
     });
-    
-    observer.observe(skillsSection);
-}
 
-// Initialize skills animation
-animateSkills();
-
-// Header scroll effect
-window.addEventListener('scroll', () => {
+    // ---------- Single, rAF-throttled scroll handler ----------
     const header = document.querySelector('.header');
-    if (window.scrollY > 100) {
-        header.style.background = 'rgba(255, 255, 255, 0.95)';
-        header.style.backdropFilter = 'blur(10px)';
-    } else {
-        header.style.background = '#ffffff';
-        header.style.backdropFilter = 'none';
-    }
-});
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const revealElements = document.querySelectorAll('.reveal');
 
-// Parallax effect for hero section
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const hero = document.querySelector('.hero');
-    const heroVisual = document.querySelector('.hero-visual');
-    
-    if (hero && heroVisual) {
-        heroVisual.style.transform = `translateY(${scrolled * 0.5}px)`;
-    }
-});
+    const onScroll = () => {
+        // Header style
+        if (header) {
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.92)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.background = '#ffffff';
+                header.style.backdropFilter = 'none';
+            }
+        }
 
-// Elements are now visible by default - no need to add reveal classes
+        // Active nav link
+        let current = '';
+        sections.forEach(section => {
+            if (window.scrollY >= section.offsetTop - 200) {
+                current = section.id;
+            }
+        });
+        navLinks.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+        });
 
-// Form validation
-function validateForm(formData) {
-    const errors = [];
-    const currentLang = localStorage.getItem('selectedLanguage') || 'en';
-    
-    if (!formData.name || formData.name.trim().length < 2) {
-        const nameError = currentLang === 'sr' 
-            ? 'Molimo unesite va\u0161e ime (najmanje 2 karaktera)'
-            : 'Please enter your name (at least 2 characters)';
-        errors.push(nameError);
-    }
-    
-    if (!formData.email || !isValidEmail(formData.email)) {
-        const emailError = currentLang === 'sr'
-            ? 'Molimo unesite va\u017eeu email adresu'
-            : 'Please enter a valid email address';
-        errors.push(emailError);
-    }
-    
-    if (!formData.message || formData.message.trim().length < 10) {
-        const messageError = currentLang === 'sr'
-            ? 'Molimo unesite poruku (najmanje 10 karaktera)'
-            : 'Please enter a message (at least 10 characters)';
-        errors.push(messageError);
-    }
-    
-    return errors;
-}
+        // Reveal animations
+        revealElements.forEach(element => {
+            if (element.getBoundingClientRect().top < window.innerHeight - 150) {
+                element.classList.add('active');
+            }
+        });
+    };
 
-function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-}
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                onScroll();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    }, { passive: true });
+    onScroll();
 
-// Form validation is now integrated in the main form handler above
-
-// Lazy loading for images (if any are added later)
-function lazyLoadImages() {
-    const images = document.querySelectorAll('img[data-src]');
-    
-    const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.dataset.src;
-                img.classList.remove('lazy');
-                imageObserver.unobserve(img);
+    // ---------- FAQ accordion ----------
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        if (!question) return;
+        question.addEventListener('click', () => {
+            const isOpen = item.classList.contains('active');
+            faqItems.forEach(other => {
+                other.classList.remove('active');
+                other.querySelector('.faq-question')?.setAttribute('aria-expanded', 'false');
+            });
+            if (!isOpen) {
+                item.classList.add('active');
+                question.setAttribute('aria-expanded', 'true');
             }
         });
     });
-    
-    images.forEach(img => {
-        img.classList.add('lazy');
-        imageObserver.observe(img);
-    });
-}
 
-// Initialize lazy loading
-lazyLoadImages();
+    // ---------- Contact form (Formspree) ----------
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
 
-// Performance optimization: Debounce scroll events
-function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
-}
+            const formData = new FormData(contactForm);
+            const data = Object.fromEntries(formData);
+            const lang = currentLang();
 
-// Apply debounce to scroll events
-const debouncedScroll = debounce(() => {
-    // Scroll-related functions here
-}, 100);
+            const errors = validateForm(data, lang);
+            if (errors.length > 0) {
+                showMessage(errors.join('\n'), 'error');
+                return;
+            }
 
-window.addEventListener('scroll', debouncedScroll);
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
+            submitButton.textContent = lang === 'sr' ? 'Slanje...' : 'Sending...';
+            submitButton.disabled = true;
 
-// Simple FAQ toggle function
-function toggleFAQ(id) {
-    // Close all FAQ items
-    for (let i = 1; i <= 5; i++) {
-        const item = document.getElementById('faq' + i);
-        const answer = document.getElementById('faq' + i + '-answer');
-        
-        if (i !== parseInt(id.replace('faq', ''))) {
-            item.classList.remove('active');
-            answer.style.display = 'none';
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (response.ok) {
+                    showMessage(lang === 'sr'
+                        ? 'Poruka je uspešno poslata! Javiću vam se uskoro.'
+                        : 'Message sent successfully! I\'ll get back to you soon.', 'success');
+                    contactForm.reset();
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                console.error('Formspree error:', error);
+                showMessage(lang === 'sr'
+                    ? 'Nažalost, došlo je do greške pri slanju poruke. Pokušajte ponovo.'
+                    : 'Sorry, there was an error sending your message. Please try again.', 'error');
+            } finally {
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+            }
+        });
+    }
+
+    function validateForm(data, lang) {
+        const errors = [];
+
+        if (!data.name || data.name.trim().length < 2) {
+            errors.push(lang === 'sr'
+                ? 'Molimo unesite vaše ime (najmanje 2 karaktera)'
+                : 'Please enter your name (at least 2 characters)');
         }
-    }
-    
-    // Toggle current FAQ item
-    const currentItem = document.getElementById(id);
-    const currentAnswer = document.getElementById(id + '-answer');
-    
-    if (currentItem.classList.contains('active')) {
-        currentItem.classList.remove('active');
-        currentAnswer.style.display = 'none';
-    } else {
-        currentItem.classList.add('active');
-        currentAnswer.style.display = 'block';
-    }
-}
 
-// Console welcome message
-console.log('%c Karolina Prevodi - Professional Translation Services ', 'background: #3498db; color: white; font-size: 16px; padding: 10px; border-radius: 5px;');
+        if (!data.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
+            errors.push(lang === 'sr'
+                ? 'Molimo unesite važeću email adresu'
+                : 'Please enter a valid email address');
+        }
+
+        if (!data.message || data.message.trim().length < 10) {
+            errors.push(lang === 'sr'
+                ? 'Molimo unesite poruku (najmanje 10 karaktera)'
+                : 'Please enter a message (at least 10 characters)');
+        }
+
+        return errors;
+    }
+
+    function showMessage(message, type) {
+        const existingMessage = document.querySelector('.message');
+        if (existingMessage) existingMessage.remove();
+
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `message ${type}-message`;
+        messageDiv.textContent = message;
+
+        contactForm.parentNode.insertBefore(messageDiv, contactForm);
+
+        setTimeout(() => {
+            if (messageDiv.parentNode) messageDiv.remove();
+        }, 6000);
+    }
+});
