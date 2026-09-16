@@ -48,7 +48,7 @@ window.siteTranslations = {
     "about-lead":
       "Ja sam Karolina. Vaš prevodilac, od prve poruke do poslednje tačke.",
     "about-body":
-      "Kroz višegodišnji rad sa srpskim i engleskim jezikom, pomažem da tekstovi pređu jezičke granice i ostanu svoji. Verujem da prevod treba da zvuči prirodno, poštuje kontekst i sačuva nameru autora.",
+      "Prevodim između srpskog i engleskog jezika profesionalno od 2017. godine. Posle samostalnog rada i iskustva u agenciji Mediante, u oktobru 2020. osnovala sam Karolina Prevodi. Moj rad obuhvata stručnu dokumentaciju i objavljene prevode knjiga, uz pažnju prema terminologiji, kontekstu i autorskom glasu.",
     v1: "Lični pristup svakom projektu",
     v2: "Istraživanje stručne terminologije",
     v3: "Završna provera svakog prevoda",
@@ -141,12 +141,29 @@ window.siteTranslations = {
     "credential-degree-type": "MASTER STUDIJE · 2013–2015",
     "credential-degree-title": "Univerzitet u Novom Sadu",
     "credential-degree-desc":
-      "Završene master studije engleskog jezika i književnosti, sa prosekom 9,43/10,00.",
+      "Master studije engleskog jezika i književnosti: oktobar 2013 – maj 2015, prosek 9,43/10,00. Osnovne studije: oktobar 2009 – septembar 2013. Filozofski fakultet, Univerzitet u Novom Sadu.",
     "credential-association-type": "STRUČNA OBUKA · 2016–2017",
     "credential-association-title":
       "Udruženje naučnih i stručnih prevodilaca Srbije",
     "credential-association-desc":
       "Obuka za usmeno i pisano prevođenje: teorija prevođenja, društveno-politički sistemi, ekonomija, elektrotehnika, mašinstvo, građevinarstvo i pravna terminologija.",
+    "work-label": "RADNO ISKUSTVO",
+    "work-title": "Iskustvo iza <em>svakog prevoda.</em>",
+    "work-owner-date": "OKTOBAR 2020 – DANAS",
+    "work-owner-title": "Vlasnica i prevodilac",
+    "work-owner-desc":
+      "Karolina Prevodi · Beograd. Prevođenje i lektura u oblastima prava, tehnike, medicine, finansija, ekologije i poljoprivrede.",
+    "work-agency-date": "SEPTEMBAR – OKTOBAR 2020",
+    "work-agency-title": "Prevodilac u agenciji",
+    "work-agency-desc":
+      "Mediante d.o.o. · Beograd. Pravni, tehnički i medicinski prevodi, redaktura, lektura i rad sa prevodilačkim memorijama.",
+    "work-freelance-date": "SEPTEMBAR 2017 – SEPTEMBAR 2020",
+    "work-freelance-title": "Samostalni prevodilac",
+    "work-freelance-desc":
+      "Prevođenje pravnih, tehničkih i medicinskih dokumenata, marketinških materijala i sajtova, kao i lektura uputstava i specifikacija.",
+    "publications-label": "OBJAVLJENI PREVODI",
+    "publication-2019": "Monografija · Prevod na engleski · 2019",
+    "publication-2021": "Knjiga · Prevod na engleski · 2021",
   },
   en: {
     skip: "Skip to content",
@@ -197,7 +214,7 @@ window.siteTranslations = {
     "about-lead":
       "I’m Karolina. Your translator, from the first message to the final full stop.",
     "about-body":
-      "Through years of working with Serbian and English, I help texts cross language boundaries while staying true to themselves. I believe a translation should read naturally, respect its context, and preserve the author’s intent.",
+      "I have worked professionally between Serbian and English since 2017. After freelance work and an in-house role at Mediante, I founded Karolina Prevodi in October 2020. My work includes specialist documentation and published book translations, with close attention to terminology, context and authorial voice.",
     v1: "A personal approach to every project",
     v2: "Research into specialist terminology",
     v3: "A final review of every translation",
@@ -289,11 +306,28 @@ window.siteTranslations = {
     "credential-degree-type": "MASTER’S DEGREE · 2013–2015",
     "credential-degree-title": "University of Novi Sad",
     "credential-degree-desc":
-      "Master’s degree in English Language and Literature, with a final grade of 9.43/10.00.",
+      "Master’s degree in English Language and Literature: October 2013 – May 2015, grade 9.43/10.00. Bachelor’s degree: October 2009 – September 2013. Faculty of Philosophy, University of Novi Sad.",
     "credential-association-type": "PROFESSIONAL TRAINING · 2016–2017",
     "credential-association-title":
       "Association of Scientific and Technical Translators of Serbia",
     "credential-association-desc":
       "Translation and interpreting courses covering translation theory, socio-political systems, economics, electrical, mechanical and civil engineering, and legal terminology.",
+    "work-label": "PROFESSIONAL EXPERIENCE",
+    "work-title": "Experience behind <em>every translation.</em>",
+    "work-owner-date": "OCTOBER 2020 – PRESENT",
+    "work-owner-title": "Owner & translator",
+    "work-owner-desc":
+      "Karolina Prevodi · Belgrade. Translation and proofreading in law, engineering, medicine, finance, ecology and agriculture.",
+    "work-agency-date": "SEPTEMBER – OCTOBER 2020",
+    "work-agency-title": "In-house translator",
+    "work-agency-desc":
+      "Mediante d.o.o. · Belgrade. Legal, technical and medical translation, editing, proofreading and use of translation memories.",
+    "work-freelance-date": "SEPTEMBER 2017 – SEPTEMBER 2020",
+    "work-freelance-title": "Freelance translator",
+    "work-freelance-desc":
+      "Translation of legal, technical and medical documents, marketing materials and websites, plus proofreading manuals and specifications.",
+    "publications-label": "PUBLISHED TRANSLATIONS",
+    "publication-2019": "Monograph · Translated into English · 2019",
+    "publication-2021": "Book · Translated into English · 2021",
   },
 };

@@ -1745,3 +1745,35 @@ footer {
   font-size: 10px;
   margin-top: 9px;
 }
+
+.published-work {
+  margin-top: 38px;
+  padding-top: 28px;
+  border-top: 1px solid #cfd5c3;
+}
+.published-work .eyebrow {
+  margin-bottom: 16px;
+}
+.publication-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+}
+.publication-grid h3 {
+  font-family: var(--serif);
+  font-size: 23px;
+  font-weight: 400;
+  margin: 0 0 8px;
+  line-height: 1.4;
+}
+.publication-grid p {
+  font-size: 11px;
+  color: var(--muted);
+  margin: 0;
+}
+@media (max-width: 600px) {
+  .publication-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
