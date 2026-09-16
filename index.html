@@ -1,731 +1,766 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="sr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karolina Lukač — Prevodilac za srpski i engleski | Karolina Prevodi</title>
-    <meta name="description" content="Profesionalni prevodi srpski-engleski: knjige, medicinska dokumentacija, tehnička uputstva i pravni dokumenti. Besplatna procena u roku od 24 časa.">
-    <meta name="author" content="Karolina Lukač">
-    <link rel="canonical" href="https://karolinaprevodi.github.io/">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Karolina Lukač — Prevodilac za srpski i engleski | Karolina Prevodi
+    </title>
+    <meta
+      name="description"
+      content="Profesionalni prevodi srpski-engleski: knjige, medicinska dokumentacija, tehnička uputstva i pravni dokumenti. Besplatna procena u roku od 24 časa."
+    />
+    <meta name="author" content="Karolina Lukač" />
+    <link rel="canonical" href="https://mzs1207.github.io/karolina-prevodi/" />
 
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Karolina Lukač — Prevodilac za srpski i engleski">
-    <meta property="og:description" content="Profesionalni prevodi srpski-engleski: knjige, medicina, tehnika i pravo. Besplatna procena u roku od 24 časa.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://karolinaprevodi.github.io/">
-    <meta property="og:image" content="https://karolinaprevodi.github.io/og-image.png">
-    <meta property="og:locale" content="sr_RS">
-    <meta property="og:locale:alternate" content="en_US">
+    <meta
+      property="og:title"
+      content="Karolina Lukač — Prevodilac za srpski i engleski"
+    />
+    <meta
+      property="og:description"
+      content="Profesionalni prevodi srpski-engleski: knjige, medicina, tehnika i pravo. Besplatna procena u roku od 24 časa."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mzs1207.github.io/karolina-prevodi/" />
+    <meta
+      property="og:image"
+      content="https://mzs1207.github.io/karolina-prevodi/og-image.png"
+    />
+    <meta property="og:locale" content="sr_RS" />
+    <meta property="og:locale:alternate" content="en_US" />
 
     <!-- Structured Data -->
     <script type="application/ld+json">
-    {
+      {
         "@context": "https://schema.org",
         "@type": "ProfessionalService",
         "name": "Karolina Prevodi",
-        "founder": { "@type": "Person", "name": "Karolina Lukač", "jobTitle": "Translator" },
+        "founder": {
+          "@type": "Person",
+          "name": "Karolina Lukač",
+          "jobTitle": "Translator"
+        },
         "description": "Profesionalne prevodilačke usluge za srpski i engleski jezik: knjige, medicinska dokumentacija, tehnička uputstva i pravni dokumenti.",
-        "url": "https://karolinaprevodi.github.io/",
+        "url": "https://mzs1207.github.io/karolina-prevodi/",
         "email": "karolinalukac@gmail.com",
         "telephone": "+381603204554",
         "areaServed": "RS",
         "knowsLanguage": ["sr", "en"],
         "sameAs": ["https://www.linkedin.com/in/karolina-luka%C4%8D-402ba5130/"]
-    }
+      }
     </script>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@6.6.6/css/flag-icons.min.css">
-
-    <!-- Scripts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <script src="translations.js" defer></script>
     <script src="script.js" defer></script>
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-</head>
-<body>
-    <!-- Header -->
+  </head>
+  <body>
+    <a data-i18n="skip" class="skip-link" href="#main">Pređi na sadržaj</a>
     <header class="header">
-        <nav class="nav">
-            <div class="nav-container">
-                <div class="nav-brand">
-                    <h1 class="brand-title">Karolina Prevodi</h1>
-                </div>
-                <ul class="nav-menu">
-                    <li class="nav-item">
-                        <a href="#home" class="nav-link" data-translate="nav-home">Početna</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#services" class="nav-link" data-translate="nav-services">Usluge</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#about" class="nav-link" data-translate="nav-about">O meni</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#portfolio" class="nav-link" data-translate="nav-portfolio">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#contact" class="nav-link" data-translate="nav-contact">Kontakt</a>
-                    </li>
-                </ul>
-                <div class="nav-actions">
-                    <div class="language-switcher">
-                        <button class="language-btn" id="languageBtn" aria-label="Izbor jezika">
-                            <i class="fas fa-globe" aria-hidden="true"></i>
-                            <span class="current-lang">SR</span>
-                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
-                        </button>
-                        <div class="language-dropdown" id="languageDropdown">
-                            <button class="language-option active" data-lang="sr">
-                                <span class="fi fi-rs"></span>
-                                <span>Srpski</span>
-                            </button>
-                            <button class="language-option" data-lang="en">
-                                <span class="fi fi-gb"></span>
-                                <span>English</span>
-                            </button>
-                        </div>
-                    </div>
-                    <button class="nav-toggle" id="mobile-menu" aria-label="Meni" aria-expanded="false">
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                    </button>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Main Content -->
-    <main>
-        <!-- Hero Section -->
-        <section id="home" class="hero">
-            <div class="hero-container">
-                <div class="hero-content">
-                    <div class="hero-badge">
-                        <i class="fas fa-bolt" aria-hidden="true"></i>
-                        <span data-translate="hero-badge">Besplatna procena u roku od 24 časa</span>
-                    </div>
-                    <h1 class="hero-title" data-translate="hero-title">
-                        Stručni prevodi <span class="highlight">srpski – engleski</span>
-                    </h1>
-                    <p class="hero-subtitle" data-translate="hero-subtitle">
-                        Specijalizovani prevodi knjiga, medicinske dokumentacije i tehničkih materijala — precizno, poverljivo i u dogovorenom roku.
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-primary" data-translate="btn-get-quote">Zatražite ponudu</a>
-                        <a href="#portfolio" class="btn btn-secondary" data-translate="btn-view-work">Pogledajte rad</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <!-- TODO: zameniti ikonicu pravom fotografijom Karoline (npr. <img src="karolina.jpg" alt="Karolina Lukač">) -->
-                    <div class="hero-visual">
-                        <i class="fas fa-language" aria-hidden="true"></i>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Services Section -->
-        <section id="services" class="services">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-badge">
-                        <span data-translate="services-badge">Čime se bavim</span>
-                    </div>
-                    <h2 class="section-title" data-translate="services-title">Usluge</h2>
-                    <p class="section-subtitle" data-translate="services-subtitle">Specijalizovane prevodilačke usluge za srpski i engleski jezik</p>
-                </div>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-icon-wrapper">
-                            <div class="service-icon">
-                                <i class="fas fa-book" aria-hidden="true"></i>
-                            </div>
-                            <div class="service-icon-bg"></div>
-                        </div>
-                        <div class="service-content">
-                            <h3 class="service-title" data-translate="service-books-title">Prevođenje knjiga</h3>
-                            <p class="service-description" data-translate="service-books-desc">
-                                Profesionalno prevođenje beletristike i publicistike, uz čuvanje autorovog glasa i kulturnih nijansi između srpskog i engleskog.
-                            </p>
-                            <div class="service-features">
-                                <div class="feature-item">
-                                    <i class="fas fa-check-circle" aria-hidden="true"></i>
-                                    <span data-translate="feature-literary">Književna izvrsnost</span>
-                                </div>
-                                <div class="feature-item">
-                                    <i class="fas fa-check-circle" aria-hidden="true"></i>
-                                    <span data-translate="feature-cultural">Kulturna autentičnost</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon-wrapper">
-                            <div class="service-icon">
-                                <i class="fas fa-pills" aria-hidden="true"></i>
-                            </div>
-                            <div class="service-icon-bg"></div>
-                        </div>
-                        <div class="service-content">
-                            <h3 class="service-title" data-translate="service-medical-title">Medicina i farmacija</h3>
-                            <p class="service-description" data-translate="service-medical-desc">
-                                Specijalizovano prevođenje medicinske dokumentacije, farmaceutskih materijala, informacija za pacijente i kliničkih istraživanja, uz preciznu medicinsku terminologiju.
-                            </p>
-                            <div class="service-features">
-                                <div class="feature-item">
-                                    <i class="fas fa-check-circle" aria-hidden="true"></i>
-                                    <span data-translate="feature-medical-accuracy">Medicinska preciznost</span>
-                                </div>
-                                <div class="feature-item">
-                                    <i class="fas fa-check-circle" aria-hidden="true"></i>
-                                    <span data-translate="feature-regulatory">Regulatorna usklađenost</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon-wrapper">
-                            <div class="service-icon">
-                                <i class="fas fa-cogs" aria-hidden="true"></i>
-                            </div>
-                            <div class="service-icon-bg"></div>
-                        </div>
-                        <div class="service-content">
-                            <h3 class="service-title" data-translate="service-technical-title">Tehnička uputstva</h3>
-                            <p class="service-description" data-translate="service-technical-desc">
-                                Precizno prevođenje uputstava za mašine, tehničkih specifikacija, korisničkih vodiča i inženjerske dokumentacije, uz pravilnu tehničku terminologiju.
-                            </p>
-                            <div class="service-features">
-                                <div class="feature-item">
-                                    <i class="fas fa-check-circle" aria-hidden="true"></i>
-                                    <span data-translate="feature-technical">Tehničko znanje</span>
-                                </div>
-                                <div class="feature-item">
-                                    <i class="fas fa-check-circle" aria-hidden="true"></i>
-                                    <span data-translate="feature-precision">Zagarantovana preciznost</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon-wrapper">
-                            <div class="service-icon">
-                                <i class="fas fa-language" aria-hidden="true"></i>
-                            </div>
-                            <div class="service-icon-bg"></div>
-                        </div>
-                        <div class="service-content">
-                            <h3 class="service-title" data-translate="service-general-title">Opšte prevođenje</h3>
-                            <p class="service-description" data-translate="service-general-desc">
-                                Kompletne prevodilačke usluge za različite tipove dokumenata, uključujući pravne, poslovne i akademske materijale.
-                            </p>
-                            <div class="service-features">
-                                <div class="feature-item">
-                                    <i class="fas fa-check-circle" aria-hidden="true"></i>
-                                    <span data-translate="feature-versatile">Svestrana ekspertiza</span>
-                                </div>
-                                <div class="feature-item">
-                                    <i class="fas fa-check-circle" aria-hidden="true"></i>
-                                    <span data-translate="feature-reliable">Pouzdan kvalitet</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon-wrapper">
-                            <div class="service-icon">
-                                <i class="fas fa-balance-scale" aria-hidden="true"></i>
-                            </div>
-                            <div class="service-icon-bg"></div>
-                        </div>
-                        <div class="service-content">
-                            <h3 class="service-title" data-translate="service-legal-title">Pravni dokumenti</h3>
-                            <p class="service-description" data-translate="service-legal-desc">
-                                Profesionalno prevođenje pravnih dokumenata, ugovora, sudskih spisa, imigracionih dokumenata i zvaničnih potvrda, uz preciznu pravnu terminologiju.
-                            </p>
-                            <div class="service-features">
-                                <div class="feature-item">
-                                    <i class="fas fa-check-circle" aria-hidden="true"></i>
-                                    <span data-translate="feature-legal-accuracy">Pravna preciznost</span>
-                                </div>
-                                <div class="feature-item">
-                                    <i class="fas fa-check-circle" aria-hidden="true"></i>
-                                    <span data-translate="feature-confidentiality">Zagarantovana poverljivost</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon-wrapper">
-                            <div class="service-icon">
-                                <i class="fas fa-laptop-code" aria-hidden="true"></i>
-                            </div>
-                            <div class="service-icon-bg"></div>
-                        </div>
-                        <div class="service-content">
-                            <h3 class="service-title" data-translate="service-it-title">Mašinstvo i IT</h3>
-                            <p class="service-description" data-translate="service-it-desc">
-                                Specijalizovano prevođenje za inženjering, građevinarstvo i IT sektor, uključujući tehničke specifikacije, softversku dokumentaciju i arhitektonske planove.
-                            </p>
-                            <div class="service-features">
-                                <div class="feature-item">
-                                    <i class="fas fa-check-circle" aria-hidden="true"></i>
-                                    <span data-translate="feature-industry-expertise">Poznavanje industrije</span>
-                                </div>
-                                <div class="feature-item">
-                                    <i class="fas fa-check-circle" aria-hidden="true"></i>
-                                    <span data-translate="feature-technical-accuracy">Tehnička tačnost</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="about">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-badge">
-                        <span data-translate="about-badge">O meni</span>
-                    </div>
-                    <h2 class="section-title" data-translate="about-title">O Karolini</h2>
-                    <p class="section-subtitle" data-translate="about-subtitle">Povezivanje kultura kroz jezik</p>
-                </div>
-                <div class="about-content">
-                    <div class="about-main">
-                        <div class="about-text">
-                            <div class="about-intro">
-                                <p class="about-description" data-translate="about-description">
-                                    Profesionalni sam prevodilac sa višegodišnjim iskustvom u premošćavanju jezičkih i kulturnih razlika. Strast prema jezicima i pažnja prema detaljima garantuju da svaki prevod zadrži izvorno značenje, ton i kulturne nijanse.
-                                </p>
-                            </div>
-                            <div class="about-highlights">
-                                <div class="highlight-item">
-                                    <div class="highlight-icon">
-                                        <i class="fas fa-bullseye" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="highlight-content">
-                                        <h3 class="highlight-title" data-translate="about-highlight-1-title">Uska specijalizacija</h3>
-                                        <p class="highlight-desc" data-translate="about-highlight-1-desc">
-                                            Fokus isključivo na srpsko-engleski jezički par znači dublje poznavanje terminologije i kulture oba jezika.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="highlight-item">
-                                    <div class="highlight-icon">
-                                        <i class="fas fa-lock" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="highlight-content">
-                                        <h3 class="highlight-title" data-translate="about-highlight-2-title">Poverljivost</h3>
-                                        <p class="highlight-desc" data-translate="about-highlight-2-desc">
-                                            Svi dokumenti se tretiraju strogo poverljivo, uz mogućnost potpisivanja ugovora o poverljivosti (NDA).
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="highlight-item">
-                                    <div class="highlight-icon">
-                                        <i class="fas fa-clock" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="highlight-content">
-                                        <h3 class="highlight-title" data-translate="about-highlight-3-title">Poštovanje rokova</h3>
-                                        <p class="highlight-desc" data-translate="about-highlight-3-desc">
-                                            Rok se jasno dogovara pre početka rada — i isporuka stiže u tom roku.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="about-visual">
-                            <!-- TODO: zameniti ikonicu pravom fotografijom Karoline -->
-                            <div class="about-image-wrapper">
-                                <div class="about-image-bg"></div>
-                                <div class="about-icon-large">
-                                    <i class="fas fa-user-graduate" aria-hidden="true"></i>
-                                </div>
-                                <div class="about-decoration">
-                                    <div class="decoration-item decoration-1">
-                                        <i class="fas fa-globe" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="decoration-item decoration-2">
-                                        <i class="fas fa-book" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="decoration-item decoration-3">
-                                        <i class="fas fa-pen" aria-hidden="true"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Portfolio Section -->
-        <section id="portfolio" class="portfolio">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title" data-translate="portfolio-title">Oblasti rada</h2>
-                    <p class="section-subtitle" data-translate="portfolio-subtitle">Tipovi projekata koje prevodim</p>
-                </div>
-                <div class="portfolio-grid">
-                    <div class="portfolio-item">
-                        <div class="portfolio-image">
-                            <i class="fas fa-book" aria-hidden="true"></i>
-                        </div>
-                        <div class="portfolio-content">
-                            <h3 class="portfolio-title" data-translate="portfolio-book-title">Prevođenje romana i proze</h3>
-                            <p class="portfolio-description" data-translate="portfolio-book-desc">
-                                Prevođenje savremene proze između srpskog i engleskog, uz čuvanje književnog stila i kulturnog konteksta za međunarodnu publiku.
-                            </p>
-                            <div class="portfolio-tags">
-                                <span class="tag" data-translate="tag-literary">Književno</span>
-                                <span class="tag" data-translate="tag-sr-en">Srpski–engleski</span>
-                                <span class="tag" data-translate="tag-fiction">Beletristika</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="portfolio-item">
-                        <div class="portfolio-image">
-                            <i class="fas fa-pills" aria-hidden="true"></i>
-                        </div>
-                        <div class="portfolio-content">
-                            <h3 class="portfolio-title" data-translate="portfolio-pharma-title">Farmaceutska dokumentacija</h3>
-                            <p class="portfolio-description" data-translate="portfolio-pharma-desc">
-                                Prevođenje informacija o lekovima, dokumentacije kliničkih ispitivanja i regulatornih materijala za farmaceutske kompanije.
-                            </p>
-                            <div class="portfolio-tags">
-                                <span class="tag" data-translate="tag-pharmaceutical">Farmacija</span>
-                                <span class="tag" data-translate="tag-en-sr">Engleski–srpski</span>
-                                <span class="tag" data-translate="tag-regulatory">Regulatorno</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="portfolio-item">
-                        <div class="portfolio-image">
-                            <i class="fas fa-cogs" aria-hidden="true"></i>
-                        </div>
-                        <div class="portfolio-content">
-                            <h3 class="portfolio-title" data-translate="portfolio-technical-title">Tehnička uputstva i priručnici</h3>
-                            <p class="portfolio-description" data-translate="portfolio-technical-desc">
-                                Prevođenje korisničkih priručnika za industrijske mašine i bezbednosnih uputstava sa engleskog na srpski.
-                            </p>
-                            <div class="portfolio-tags">
-                                <span class="tag" data-translate="tag-technical">Tehničko</span>
-                                <span class="tag" data-translate="tag-en-sr">Engleski–srpski</span>
-                                <span class="tag" data-translate="tag-manuals">Priručnici</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Process Section -->
-        <section id="process" class="process">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-badge">
-                        <span data-translate="process-badge">Kako funkcioniše</span>
-                    </div>
-                    <h2 class="section-title" data-translate="process-title">Proces prevođenja</h2>
-                    <p class="section-subtitle" data-translate="process-subtitle">Jednostavan i efikasan radni tok</p>
-                </div>
-                <div class="process-steps">
-                    <div class="step-item">
-                        <div class="step-number">1</div>
-                        <div class="step-content">
-                            <h3 class="step-title" data-translate="step-1-title">Konsultacija</h3>
-                            <p class="step-description" data-translate="step-1-desc">
-                                Razgovaramo o zahtevima projekta, roku i specifičnim potrebama, kako bismo osigurali potpuno razumevanje.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="step-item">
-                        <div class="step-number">2</div>
-                        <div class="step-content">
-                            <h3 class="step-title" data-translate="step-2-title">Ponuda i dogovor</h3>
-                            <p class="step-description" data-translate="step-2-desc">
-                                Dobijate jasnu ponudu sa cenom i rokom isporuke — bez skrivenih troškova.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="step-item">
-                        <div class="step-number">3</div>
-                        <div class="step-content">
-                            <h3 class="step-title" data-translate="step-3-title">Prevođenje</h3>
-                            <p class="step-description" data-translate="step-3-desc">
-                                Profesionalno prevođenje sa pažnjom na kulturni kontekst, terminologiju i doslednost stila.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="step-item">
-                        <div class="step-number">4</div>
-                        <div class="step-content">
-                            <h3 class="step-title" data-translate="step-4-title">Provera i isporuka</h3>
-                            <p class="step-description" data-translate="step-4-desc">
-                                Završna provera kvaliteta i isporuka prevedenih dokumenata u željenom formatu, u dogovorenom roku.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section id="faq" class="faq">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-badge">
-                        <span data-translate="faq-badge">Česta pitanja</span>
-                    </div>
-                    <h2 class="section-title" data-translate="faq-title">Imate pitanja?</h2>
-                    <p class="section-subtitle" data-translate="faq-subtitle">Sve što treba da znate o saradnji</p>
-                </div>
-                <div class="faq-container">
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            <h3 data-translate="faq-1-question">Između kojih jezika prevodite?</h3>
-                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <p data-translate="faq-1-answer">
-                                Specijalizovana sam za srpsko-engleske i englesko-srpske prevode. Ova fokusirana ekspertiza omogućava prevode najvišeg kvaliteta, sa dubokim kulturnim razumevanjem i preciznom terminologijom.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            <h3 data-translate="faq-2-question">Koliko traje tipičan prevod?</h3>
-                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <p data-translate="faq-2-answer">
-                                Rok zavisi od dužine i složenosti dokumenta. Tipično, 1–5 stranica traje 2–3 dana, dok veći projekti mogu zahtevati 1–2 nedelje. Tačan rok uvek dobijate unapred, uz ponudu.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            <h3 data-translate="faq-3-question">Da li radite prevode za službenu upotrebu?</h3>
-                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <p data-translate="faq-3-answer">
-                                Radim prevode pravnih i zvaničnih dokumenata uz izjavu o tačnosti prevoda. Ako vam je potrebna i overa sudskog tumača, kontaktirajte me — pomoći ću vam da pronađete pravo rešenje za vaš slučaj.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            <h3 data-translate="faq-4-question">Koliko košta prevod?</h3>
-                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <p data-translate="faq-4-answer">
-                                Cena zavisi od obima, oblasti i roka, a obračunava se po prevodilačkoj strani (1.800 karaktera sa razmacima). Pošaljite dokument i dobićete besplatnu, neobavezujuću procenu u roku od 24 časa.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            <h3 data-translate="faq-5-question">U kojim oblastima ste specijalizovani?</h3>
-                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <p data-translate="faq-5-answer">
-                                Glavne specijalizacije su književna dela (beletristika i publicistika), medicinska i farmaceutska dokumentacija, tehnička uputstva i poslovni dokumenti.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            <h3 data-translate="faq-6-question">Kako osiguravate kvalitet prevoda?</h3>
-                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <p data-translate="faq-6-answer">
-                                Proces obuhvata istraživanje terminologije, kulturnu adaptaciju i više faza provere. Svaki prevod prolazi završnu lekturu radi tačnosti i doslednosti stila.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="contact">
-            <div class="container">
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <h2 class="section-title" data-translate="contact-title">Kontaktirajte me</h2>
-                        <p class="contact-description" data-translate="contact-description">
-                            Pošaljite dokument ili opišite projekat — dobićete besplatnu, neobavezujuću procenu cene i roka u roku od 24 časa.
-                        </p>
-                        <div class="contact-details">
-                            <div class="contact-item">
-                                <i class="fas fa-envelope" aria-hidden="true"></i>
-                                <div class="contact-info-text">
-                                    <h4 data-translate="contact-email-label">Email</h4>
-                                    <p><a href="mailto:karolinalukac@gmail.com" class="contact-link">karolinalukac@gmail.com</a></p>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-phone" aria-hidden="true"></i>
-                                <div class="contact-info-text">
-                                    <h4 data-translate="contact-phone-label">Telefon</h4>
-                                    <p><a href="tel:+381603204554" class="contact-link">+381 60 3204 554</a></p>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-comments" aria-hidden="true"></i>
-                                <div class="contact-info-text">
-                                    <h4 data-translate="contact-chat-label">Brze poruke</h4>
-                                    <div class="chat-buttons">
-                                        <a href="https://wa.me/381603204554" target="_blank" rel="noopener" class="chat-btn chat-btn-whatsapp">
-                                            <i class="fab fa-whatsapp" aria-hidden="true"></i>
-                                            <span data-translate="btn-whatsapp">WhatsApp</span>
-                                        </a>
-                                        <a href="viber://chat?number=%2B381603204554" class="chat-btn chat-btn-viber">
-                                            <i class="fab fa-viber" aria-hidden="true"></i>
-                                            <span data-translate="btn-viber">Viber</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-clock" aria-hidden="true"></i>
-                                <div class="contact-info-text">
-                                    <h4 data-translate="contact-hours-label">Radno vreme</h4>
-                                    <p data-translate="contact-hours-weekday">Ponedeljak – petak: 9:00 – 18:00</p>
-                                    <p data-translate="contact-hours-weekend">Vikend: dostupno po dogovoru</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="social-links">
-                            <a href="https://www.linkedin.com/in/karolina-luka%C4%8D-402ba5130/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
-                                <i class="fab fa-linkedin" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="contact-form">
-                        <form id="contactForm" class="form" action="https://formspree.io/f/xpqoegvn" method="POST">
-                            <div class="form-group">
-                                <label for="name" class="form-label" data-translate="form-name-label">Ime *</label>
-                                <input type="text" id="name" name="name" class="form-input" required placeholder="Unesite vaše ime" data-translate-placeholder="form-name-placeholder">
-                            </div>
-                            <div class="form-group">
-                                <label for="email" class="form-label" data-translate="form-email-label">Email *</label>
-                                <input type="email" id="email" name="email" class="form-input" required placeholder="Unesite vaš email" data-translate-placeholder="form-email-placeholder">
-                            </div>
-                            <div class="form-group">
-                                <label for="service" class="form-label" data-translate="form-service-label">Tip usluge</label>
-                                <select id="service" name="service" class="form-input">
-                                    <option value="" data-translate="form-service-placeholder">Izaberite uslugu</option>
-                                    <option value="books" data-translate="form-service-books">Prevođenje knjiga</option>
-                                    <option value="medical" data-translate="form-service-medical">Medicina i farmacija</option>
-                                    <option value="technical" data-translate="form-service-technical">Tehnička uputstva</option>
-                                    <option value="legal" data-translate="form-service-legal">Pravni dokumenti</option>
-                                    <option value="it" data-translate="form-service-it">Mašinstvo i IT</option>
-                                    <option value="general" data-translate="form-service-general">Opšte prevođenje</option>
-                                    <option value="other" data-translate="form-service-other">Ostalo</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="message" class="form-label" data-translate="form-message-label">Poruka *</label>
-                                <textarea id="message" name="message" class="form-input" rows="5" required placeholder="Opišite vaš projekat ili postavite pitanje..." data-translate-placeholder="form-message-placeholder"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label for="attachment" class="form-label" data-translate="form-attachment-label">Prilog (opciono)</label>
-                                <input type="file" id="attachment" name="attachment" class="form-input" accept=".pdf,.doc,.docx,.txt,.pages">
-                                <small class="form-help" data-translate="form-attachment-help">PDF, Word ili tekstualni fajlovi (najviše 10 MB)</small>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-full" data-translate="form-submit-btn">Pošaljite poruku</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section id="cta" class="cta">
-            <div class="container">
-                <div class="cta-content">
-                    <h2 class="cta-title" data-translate="cta-title">Spremni da srušite jezičke barijere?</h2>
-                    <p class="cta-subtitle" data-translate="cta-subtitle">
-                        Pošaljite dokument danas — besplatna procena stiže u roku od 24 časa.
-                    </p>
-                    <div class="cta-buttons">
-                        <a href="#contact" class="btn btn-primary btn-large" data-translate="cta-get-started">Zatražite ponudu</a>
-                        <a href="#services" class="btn btn-secondary btn-large" data-translate="cta-learn-more">Saznajte više</a>
-                    </div>
-                    <div class="cta-features">
-                        <div class="cta-feature">
-                            <i class="fas fa-clock" aria-hidden="true"></i>
-                            <span data-translate="cta-fast">Odgovor u roku od 24 časa</span>
-                        </div>
-                        <div class="cta-feature">
-                            <i class="fas fa-shield-alt" aria-hidden="true"></i>
-                            <span data-translate="cta-secure">Bezbedno i poverljivo</span>
-                        </div>
-                        <div class="cta-feature">
-                            <i class="fas fa-award" aria-hidden="true"></i>
-                            <span data-translate="cta-quality">Garantovan kvalitet</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h3 class="footer-title">Karolina Prevodi</h3>
-                    <p class="footer-description" data-translate="footer-description">
-                        Profesionalne prevodilačke usluge za srpski i engleski jezik — knjige, medicina, tehnika i pravo.
-                    </p>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-section">
-                        <h4 class="footer-heading" data-translate="footer-services-heading">Usluge</h4>
-                        <ul class="footer-list">
-                            <li><a href="#services" data-translate="footer-books-link">Prevođenje knjiga</a></li>
-                            <li><a href="#services" data-translate="footer-medical-link">Medicina i farmacija</a></li>
-                            <li><a href="#services" data-translate="footer-technical-link">Tehnička uputstva</a></li>
-                            <li><a href="#services" data-translate="footer-legal-link">Pravni dokumenti</a></li>
-                            <li><a href="#services" data-translate="footer-it-link">Mašinstvo i IT</a></li>
-                            <li><a href="#services" data-translate="footer-general-link">Opšte prevođenje</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-section">
-                        <h4 class="footer-heading" data-translate="footer-company-heading">Informacije</h4>
-                        <ul class="footer-list">
-                            <li><a href="#about" data-translate="footer-about-link">O meni</a></li>
-                            <li><a href="#portfolio" data-translate="footer-portfolio-link">Portfolio</a></li>
-                            <li><a href="#contact" data-translate="footer-contact-link">Kontakt</a></li>
-                            <li><a href="privacy.html" data-translate="footer-privacy-link">Politika privatnosti</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p data-translate="footer-copyright">&copy; 2026 Karolina Lukač — Prevodi. Sva prava zadržana.</p>
-            </div>
+      <nav class="container nav" aria-label="Main">
+        <a class="brand" href="#home" aria-label="Karolina Prevodi"
+          ><span class="brand-mark">k<span>.</span></span
+          ><span
+            >karolina<span class="brand-sub"
+              ><span data-i18n="brand">prevodi</span></span
+            ></span
+          ></a
+        >
+        <div class="nav-menu" id="nav-menu">
+          <a data-i18n="nav-services" href="#services" class="nav-link"
+            >Usluge</a
+          ><a data-i18n="nav-about" href="#about" class="nav-link">O meni</a
+          ><a data-i18n="nav-process" href="#process" class="nav-link"
+            >Kako sarađujemo</a
+          >
         </div>
+        <div class="nav-actions">
+          <div class="languages" aria-label="Language">
+            <button type="button" data-lang="sr" aria-pressed="true">SR</button
+            ><span>/</span
+            ><button type="button" data-lang="en" aria-pressed="false">
+              EN
+            </button>
+          </div>
+          <a href="#contact" class="button button-small nav-cta"
+            ><span data-i18n="quote">Zatražite ponudu</span
+            ><span aria-hidden="true">↗</span></a
+          ><button
+            class="menu-toggle"
+            aria-controls="nav-menu"
+            aria-expanded="false"
+            aria-label="Menu"
+          >
+            <span></span><span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="hero container" id="home">
+        <div class="hero-copy">
+          <div class="eyebrow">
+            <span class="status-dot"></span
+            ><span data-i18n="hero-eyebrow">VAŠE REČI. NOVI HORIZONTI.</span>
+          </div>
+          <h1 data-i18n="hero-title">
+            Prave reči.<br />
+            Na <em>oba</em><br />
+            jezika.
+          </h1>
+          <p data-i18n="hero-description" class="hero-description">
+            Prevodi koji čuvaju značenje, stil i sve ono između redova. Srpski i
+            engleski, uz ličnu posvećenost svakom tekstu.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="#contact"
+              ><span data-i18n="start">Razgovarajmo o vašem projektu</span
+              ><span aria-hidden="true">↗</span></a
+            ><a class="text-link" href="#services"
+              ><span data-i18n="explore">Istražite usluge</span>
+              <span aria-hidden="true">↓</span></a
+            >
+          </div>
+          <div class="hero-note">
+            <span class="small-check">✓</span
+            ><span data-i18n="free">Besplatna procena. Bez obaveza.</span>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-top">
+            <span>KAROLINA LUKAČ</span><span>SR ↔ EN</span>
+          </div>
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="art-type type-sr">reč<span>.</span></div>
+          <div class="art-type type-en">word<span>.</span></div>
+          <div class="art-connector">↗</div>
+          <div class="art-caption">
+            <span>01 — 02</span
+            ><span
+              ><span data-i18n="art-caption"
+                >Isto značenje.<br />
+                Nove mogućnosti.</span
+              ></span
+            >
+          </div>
+          <div class="art-seal">
+            <span data-i18n="seal"
+              >PAŽLJIVO<br />
+              PREVEDENO</span
+            ><span>✳</span>
+          </div>
+        </div>
+      </section>
+      <div class="trust-strip">
+        <div class="container trust-inner">
+          <span class="language-pair"
+            ><span data-i18n="pair">SRPSKI <span>↔</span> ENGLESKI</span></span
+          ><span class="trust-item"
+            ><span aria-hidden="true">✳</span
+            ><span data-i18n="trust1"
+              >Direktna saradnja sa prevodiocem</span
+            ></span
+          ><span class="trust-item"
+            ><span aria-hidden="true">✳</span
+            ><span data-i18n="trust2">Poverljivost dokumenata</span></span
+          ><span class="trust-item"
+            ><span aria-hidden="true">✳</span
+            ><span data-i18n="trust3">Jasno dogovoreni rokovi</span></span
+          >
+        </div>
+      </div>
+      <section class="section container" id="services">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">
+              01 / <span data-i18n="services-label">USLUGE</span>
+            </p>
+            <h2 data-i18n="services-title">
+              Vaš tekst.<br />
+              Moja <em>oblast.</em>
+            </h2>
+          </div>
+          <p data-i18n="services-intro" class="section-intro">
+            Od jedne važne stranice do čitave knjige. Prevod prilagođen vašoj
+            oblasti, publici i nameni.
+          </p>
+        </div>
+        <div class="services-grid">
+          <a class="service-card" href="#contact" data-service="books"
+            ><div class="card-top">
+              <svg
+                viewBox="0 0 32 32"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.3"
+                aria-hidden="true"
+              >
+                <path
+                  d="M4 6c6-2 10 0 12 2 2-2 6-4 12-2v21c-6-2-10 0-12 2-2-2-6-4-12-2zM16 8v21"
+                /></svg
+              ><span>01</span>
+            </div>
+            <h3 data-i18n="books-title">Knjige i izdavaštvo</h3>
+            <p data-i18n="books-desc">
+              Glas autora ostaje prepoznatljiv. Priča pronalazi novu publiku.
+            </p>
+            <div class="card-bottom">
+              <span data-i18n="books-tags"
+                >Beletristika · Publicistika · Proza</span
+              ><span class="circle-arrow" aria-hidden="true">↗</span>
+            </div></a
+          ><a class="service-card" href="#contact" data-service="medical"
+            ><div class="card-top">
+              <svg
+                viewBox="0 0 32 32"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.3"
+                aria-hidden="true"
+              >
+                <path d="M12 4h8v8h8v8h-8v8h-8v-8H4v-8h8z" /></svg
+              ><span>02</span>
+            </div>
+            <h3 data-i18n="medical-title">Medicina i farmacija</h3>
+            <p data-i18n="medical-desc">
+              Pažljivo odabrana terminologija za sadržaj u kome svaki detalj
+              znači.
+            </p>
+            <div class="card-bottom">
+              <span data-i18n="medical-tags"
+                >Medicinska dokumentacija · Farmacija</span
+              ><span class="circle-arrow" aria-hidden="true">↗</span>
+            </div></a
+          ><a class="service-card" href="#contact" data-service="technical"
+            ><div class="card-top">
+              <svg
+                viewBox="0 0 32 32"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.3"
+                aria-hidden="true"
+              >
+                <path d="m11 8-8 8 8 8m10-16 8 8-8 8M18 4l-4 24" /></svg
+              ><span>03</span>
+            </div>
+            <h3 data-i18n="technical-title">Tehnika i IT</h3>
+            <p data-i18n="technical-desc">
+              Složene informacije, jasno prenete. Za dokumentaciju koja se
+              razume.
+            </p>
+            <div class="card-bottom">
+              <span data-i18n="technical-tags"
+                >Uputstva · Softver · Inženjering</span
+              ><span class="circle-arrow" aria-hidden="true">↗</span>
+            </div></a
+          ><a class="service-card" href="#contact" data-service="business"
+            ><div class="card-top">
+              <svg
+                viewBox="0 0 32 32"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.3"
+                aria-hidden="true"
+              >
+                <rect x="6" y="3" width="20" height="26" rx="1" />
+                <path d="M11 10h10M11 16h10M11 22h6" /></svg
+              ><span>04</span>
+            </div>
+            <h3 data-i18n="business-title">Pravo i poslovanje</h3>
+            <p data-i18n="business-desc">
+              Profesionalni prevodi za vaše dogovore, dokumenta i sledeći
+              poslovni korak.
+            </p>
+            <div class="card-bottom">
+              <span data-i18n="business-tags"
+                >Ugovori · Poslovni i akademski tekstovi</span
+              ><span class="circle-arrow" aria-hidden="true">↗</span>
+            </div></a
+          >
+        </div>
+        <div class="service-foot">
+          <p data-i18n="other">
+            Niste sigurni kojoj oblasti pripada vaš tekst?
+          </p>
+          <a href="#contact" class="text-link"
+            ><span data-i18n="find">Pronađimo rešenje zajedno</span
+            ><span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </section>
+      <section class="about-section" id="about">
+        <div class="container about-grid">
+          <div class="about-art">
+            <div class="about-art-top">
+              <span data-i18n="behind">IZA SVAKOG PREVODA</span><span>↗</span>
+            </div>
+            <div class="monogram">K<span>L</span><i>.</i></div>
+            <div class="signature">Karolina Lukač</div>
+            <div class="about-art-bottom">
+              <span data-i18n="translator">PREVODILAC / SRPSKI & ENGLESKI</span>
+            </div>
+          </div>
+          <div class="about-copy">
+            <p class="eyebrow">
+              02 / <span data-i18n="about-label">O MENI</span>
+            </p>
+            <h2 data-i18n="about-title">
+              Dobar prevod počinje<br />
+              <em>razumevanjem.</em>
+            </h2>
+            <p data-i18n="about-lead" class="about-lead">
+              Ja sam Karolina. Vaš prevodilac, od prve poruke do poslednje
+              tačke.
+            </p>
+            <p data-i18n="about-body">
+              Kroz višegodišnji rad sa srpskim i engleskim jezikom, pomažem da
+              tekstovi pređu jezičke granice i ostanu svoji. Verujem da prevod
+              treba da zvuči prirodno, poštuje kontekst i sačuva nameru autora.
+            </p>
+            <div class="about-values">
+              <div>
+                <span>✓</span
+                ><span data-i18n="v1">Lični pristup svakom projektu</span>
+              </div>
+              <div>
+                <span>✓</span
+                ><span data-i18n="v2">Istraživanje stručne terminologije</span>
+              </div>
+              <div>
+                <span>✓</span
+                ><span data-i18n="v3">Završna provera svakog prevoda</span>
+              </div>
+            </div>
+            <a
+              class="text-link"
+              href="https://www.linkedin.com/in/karolina-luka%C4%8D-402ba5130/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span data-i18n="linkedin">Upoznajte me na LinkedIn-u</span
+              ><span aria-hidden="true">↗</span></a
+            >
+          </div>
+        </div>
+        <div class="container credentials">
+          <div class="credentials-heading">
+            <div>
+              <p data-i18n="credentials-label" class="eyebrow">
+                ZNANJE I USAVRŠAVANJE
+              </p>
+              <h2 data-i18n="credentials-title">
+                Iza reči stoji <em>znanje.</em>
+              </h2>
+            </div>
+            <a
+              class="text-link"
+              href="https://www.linkedin.com/in/karolina-luka%C4%8D-402ba5130/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span data-i18n="credentials-source"
+                >Više o kvalifikacijama na LinkedIn-u</span
+              ><span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <div class="credentials-grid">
+            <article class="credential">
+              <div class="credential-top">
+                <span class="credential-symbol" aria-hidden="true">✳</span
+                ><span data-i18n="credential-cae-type">SERTIFIKAT</span>
+              </div>
+              <h3 data-i18n="credential-cae-title">
+                Cambridge English: Advanced
+              </h3>
+              <p data-i18n="credential-cae-desc">
+                CAE sertifikat iz engleskog jezika — Cambridge English Language
+                Assessment.
+              </p>
+            </article>
+            <article class="credential">
+              <div class="credential-top">
+                <span class="credential-symbol" aria-hidden="true">↗</span
+                ><span data-i18n="credential-school-type"
+                  >STRUČNA OBUKA · 2017</span
+                >
+              </div>
+              <h3 data-i18n="credential-school-title">
+                Ciklopea Summer School
+              </h3>
+              <p data-i18n="credential-school-desc">
+                Dvonedeljna obuka za prevođenje i lokalizaciju: mentorski rad i
+                radionice CAT i QA alata, uključujući Trados, Across i Verifika.
+              </p>
+            </article>
+            <article class="credential">
+              <div class="credential-top">
+                <span class="credential-symbol" aria-hidden="true">Aa</span
+                ><span data-i18n="credential-paper-type">RAD · 2016</span>
+              </div>
+              <h3 data-i18n="credential-paper-title">
+                Jezik u fokusu istraživanja
+              </h3>
+              <p data-i18n="credential-paper-desc">
+                Rad o glagolima kretanja u engleskom jeziku i njihovom
+                prevođenju na srpski, naveden uz Filozofski fakultet
+                Univerziteta u Novom Sadu.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section container" id="process">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">
+              03 / <span data-i18n="process-label">KAKO SARAĐUJEMO</span>
+            </p>
+            <h2 data-i18n="process-title">
+              Bez komplikacija.<br />
+              Od teksta do <em>prevoda.</em>
+            </h2>
+          </div>
+          <p data-i18n="process-intro" class="section-intro">
+            Znate s kim radite, koliko košta i kada stiže. Od samog početka.
+          </p>
+        </div>
+        <div class="steps">
+          <article class="step">
+            <div class="step-number">01<span aria-hidden="true">↗</span></div>
+            <h3 data-i18n="step01">Recite mi šta vam treba</h3>
+            <p data-i18n="step-desc01">
+              Opišite tekst, izaberite jezički smer i navedite željeni rok.
+              Dokument možete poslati i emailom.
+            </p>
+          </article>
+          <article class="step">
+            <div class="step-number">02<span aria-hidden="true">↗</span></div>
+            <h3 data-i18n="step02">Dobijate jasnu ponudu</h3>
+            <p data-i18n="step-desc02">
+              U roku od 24 časa dobijate besplatnu procenu. Cenu i rok
+              dogovaramo pre početka rada.
+            </p>
+          </article>
+          <article class="step">
+            <div class="step-number">03<span aria-hidden="true">↗</span></div>
+            <h3 data-i18n="step03">Prevod je u vašim rukama</h3>
+            <p data-i18n="step-desc03">
+              Prevodim, proveravam terminologiju i stil, pa šaljem gotov tekst u
+              dogovorenom formatu.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section class="contact-section" id="contact">
+        <div class="container contact-grid">
+          <div class="contact-copy">
+            <p class="eyebrow">
+              04 / <span data-i18n="contact-label">VAŠ SLEDEĆI KORAK</span>
+            </p>
+            <h2 data-i18n="contact-title">
+              Dajte svojim<br />
+              rečima
+              <em
+                >novi<br />
+                prostor.</em
+              >
+            </h2>
+            <p data-i18n="contact-desc">
+              Recite mi nešto o vašem projektu. Javiću vam se sa predlogom cene
+              i roka — bez obaveze da prihvatite.
+            </p>
+            <div class="contact-direct">
+              <a href="mailto:karolinalukac@gmail.com"
+                >karolinalukac@gmail.com ↗</a
+              ><a href="tel:+381603204554">+381 60 3204 554</a>
+              <div class="chat-links">
+                <a
+                  href="https://wa.me/381603204554"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >WhatsApp ↗</a
+                ><a href="viber://chat?number=%2B381603204554">Viber ↗</a>
+              </div>
+            </div>
+            <p class="contact-note">
+              <span class="status-dot"></span
+              ><span data-i18n="reply">Odgovor u roku od 24 časa</span>
+            </p>
+          </div>
+          <div class="form-panel">
+            <div class="form-heading">
+              <h3 data-i18n="form-title">Hajde da počnemo.</h3>
+              <span id="step-count">1 / 2</span>
+            </div>
+            <div class="form-progress">
+              <span class="is-current" id="progress-one"
+                ><span data-i18n="project">O projektu</span></span
+              ><span id="progress-two"
+                ><span data-i18n="details">Vaši podaci</span></span
+              >
+            </div>
+            <noscript
+              ><p>
+                Za ponudu pišite na / For a quote, email
+                <a href="mailto:karolinalukac@gmail.com"
+                  >karolinalukac@gmail.com</a
+                >.
+              </p>
+              <style>
+                #contactForm,
+                .form-progress {
+                  display: none;
+                }
+              </style></noscript
+            >
+            <form
+              id="contactForm"
+              action="https://formspree.io/f/xpqoegvn"
+              method="POST"
+            >
+              <input
+                type="hidden"
+                name="_subject"
+                value="Novi upit za prevod — Karolina Prevodi"
+              />
+              <div class="honeypot" aria-hidden="true">
+                <label
+                  >Leave empty<input
+                    name="_gotcha"
+                    tabindex="-1"
+                    autocomplete="off"
+                /></label>
+              </div>
+              <fieldset id="form-step-one">
+                <legend class="sr-only">
+                  <span data-i18n="project-legend">Podaci o projektu</span>
+                </legend>
+                <label for="service"
+                  ><span data-i18n="service-label"
+                    >Koji prevod vam je potreban?</span
+                  ></label
+                ><select id="service" name="service" required>
+                  <option value="">
+                    <span data-i18n="choose">Izaberite oblast</span>
+                  </option>
+                  <option data-i18n="opt-books" value="books">
+                    Knjige i izdavaštvo
+                  </option>
+                  <option data-i18n="opt-medical" value="medical">
+                    Medicina i farmacija
+                  </option>
+                  <option data-i18n="opt-technical" value="technical">
+                    Tehnika i IT
+                  </option>
+                  <option data-i18n="opt-business" value="business">
+                    Pravo i poslovanje
+                  </option>
+                  <option data-i18n="opt-other" value="other">
+                    Nešto drugo / nisam siguran/a
+                  </option>
+                </select>
+                <div class="form-row">
+                  <div>
+                    <label for="direction"
+                      ><span data-i18n="direction">Jezički smer</span></label
+                    ><select id="direction" name="direction">
+                      <option value="sr-en">
+                        <span data-i18n="sr-en">Srpski → Engleski</span>
+                      </option>
+                      <option value="en-sr">
+                        <span data-i18n="en-sr">Engleski → Srpski</span>
+                      </option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="deadline"
+                      ><span data-i18n="deadline"
+                        >Željeni rok (opciono)</span
+                      ></label
+                    ><input id="deadline" name="deadline" type="date" />
+                  </div>
+                </div>
+                <label for="message"
+                  ><span data-i18n="message">Ukratko o projektu</span></label
+                ><textarea
+                  id="message"
+                  name="message"
+                  rows="3"
+                  required
+                  minlength="10"
+                  maxlength="10000"
+                  aria-describedby="message-help"
+                ></textarea
+                ><small data-i18n="message-help" id="message-help"
+                  >Vrsta teksta, približan broj strana i sve što vam je važno.
+                  Najmanje 10 karaktera.</small
+                ><button type="button" class="button form-next" id="next-step">
+                  <span data-i18n="continue">Dalje: vaši podaci</span
+                  ><span aria-hidden="true">→</span>
+                </button>
+              </fieldset>
+              <fieldset id="form-step-two" hidden>
+                <legend class="sr-only">
+                  <span data-i18n="details-legend">Kontakt podaci</span>
+                </legend>
+                <div class="request-summary" id="request-summary"></div>
+                <label for="name"><span data-i18n="name">Vaše ime</span></label
+                ><input
+                  type="text"
+                  id="name"
+                  name="name"
+                  autocomplete="name"
+                  required
+                  minlength="2"
+                  maxlength="120"
+                /><label for="email">Email</label
+                ><input
+                  type="email"
+                  id="email"
+                  name="email"
+                  autocomplete="email"
+                  required
+                  maxlength="254"
+                />
+                <p class="file-note">
+                  <span data-i18n="file-note"
+                    >Imate dokument? Pošaljite ga direktno na</span
+                  >
+                  <a href="mailto:karolinalukac@gmail.com"
+                    >karolinalukac@gmail.com</a
+                  >.
+                </p>
+                <label class="consent"
+                  ><input type="checkbox" name="consent" required /><span
+                    ><span data-i18n="consent"
+                      >Saglasan/na sam da se moji podaci koriste za odgovor na
+                      ovaj upit.</span
+                    >
+                    <a href="privacy.html" target="_blank" rel="noopener"
+                      ><span data-i18n="privacy">Privatnost</span> ↗</a
+                    ></span
+                  ></label
+                ><button type="submit" class="button" id="submit-button">
+                  <span data-i18n="send">Pošaljite upit</span
+                  ><span aria-hidden="true">↗</span></button
+                ><button type="button" class="back-button" id="previous-step">
+                  ← <span data-i18n="back">Nazad na projekat</span>
+                </button>
+              </fieldset>
+              <div
+                id="form-status"
+                role="status"
+                aria-live="polite"
+                tabindex="-1"
+                hidden
+              ></div>
+            </form>
+            <p class="form-footnote">
+              <span data-i18n="form-footnote"
+                >Besplatna procena · Bez obaveza · Ličan odgovor</span
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="section container faq-section" id="faq">
+        <div>
+          <p class="eyebrow">
+            05 / <span data-i18n="faq-label">DOBRO JE ZNATI</span>
+          </p>
+          <h2 data-i18n="faq-title">
+            Još nekoliko<br />
+            <em>odgovora.</em>
+          </h2>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>
+              <span data-i18n="faq-q0">Kako se određuje cena prevoda?</span
+              ><span class="faq-plus" aria-hidden="true">+</span>
+            </summary>
+            <p data-i18n="faq-a0">
+              Cena zavisi od obima, oblasti i roka. Obračun je po prevodilačkoj
+              strani (1.800 karaktera sa razmacima). Pre početka rada dobijate
+              jasnu, neobavezujuću ponudu.
+            </p>
+          </details>
+          <details>
+            <summary>
+              <span data-i18n="faq-q1"
+                >Da li je moguća overa sudskog tumača?</span
+              ><span class="faq-plus" aria-hidden="true">+</span>
+            </summary>
+            <p data-i18n="faq-a1">
+              Ako vam je potrebna overa sudskog tumača, naglasite to u upitu
+              kako bismo razmotrili odgovarajuće rešenje. Usluga prevoda sama po
+              sebi ne uključuje overu.
+            </p>
+          </details>
+          <details>
+            <summary>
+              <span data-i18n="faq-q2"
+                >Koliko vremena je potrebno za prevod?</span
+              ><span class="faq-plus" aria-hidden="true">+</span>
+            </summary>
+            <p data-i18n="faq-a2">
+              Rok zavisi od obima i složenosti teksta. Navedite željeni datum u
+              upitu; tačan rok dogovaramo uz ponudu, pre početka rada.
+            </p>
+          </details>
+          <details>
+            <summary>
+              <span data-i18n="faq-q3">Kako da pošaljem dokument?</span
+              ><span class="faq-plus" aria-hidden="true">+</span>
+            </summary>
+            <p data-i18n="faq-a3">
+              Popunite upit sa opisom projekta ili pošaljite dokument na
+              karolinalukac@gmail.com. Word, PDF i tekstualni fajlovi olakšavaju
+              procenu obima.
+            </p>
+          </details>
+          <details>
+            <summary>
+              <span data-i18n="faq-q4">Da li su moji dokumenti poverljivi?</span
+              ><span class="faq-plus" aria-hidden="true">+</span>
+            </summary>
+            <p data-i18n="faq-a4">
+              Dokumente tretiram poverljivo i koristim za dogovorenu uslugu. Ako
+              vam je potreban ugovor o poverljivosti (NDA), možemo ga dogovoriti
+              pre razmene materijala.
+            </p>
+          </details>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer-top">
+          <a class="footer-wordmark" href="#home"
+            >karolina<span>prevodi.</span></a
+          >
+          <p data-i18n="footer-tag">
+            Smisao ostaje.<br />
+            Mogućnosti rastu.
+          </p>
+          <a class="footer-up" href="#home" aria-label="Back to top">↑</a>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span id="year">2026</span> Karolina Lukač</span
+          ><span>SR ↔ EN</span
+          ><a href="privacy.html"
+            ><span data-i18n="privacy-long">Politika privatnosti</span></a
+          >
+        </div>
+      </div>
     </footer>
-</body>
+  </body>
 </html>

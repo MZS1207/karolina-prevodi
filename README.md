@@ -1,148 +1,37 @@
-# Karolina Prevodi - Professional Translation Website
+# Karolina Prevodi
 
-A modern, responsive website for professional translation services built with HTML, CSS, and JavaScript.
+Bilingual Serbian / English website for Karolina Lukač’s translation services. Plain HTML, CSS, and JavaScript; no build step.
 
-## Features
+## Local preview
 
-- **Responsive Design** - Works perfectly on desktop, tablet, and mobile
-- **Modern UI/UX** - Clean, professional design with smooth animations
-- **SEO Optimized** - Meta tags, semantic HTML, and accessibility features
-- **Contact Form** - Functional contact form with validation
-- **Portfolio Section** - Showcase translation projects
-- **Service Cards** - Highlight different translation services
-- **Social Media Integration** - Links to professional profiles
-- **Performance Optimized** - Lazy loading, debounced events, and smooth animations
-
-## Technology Stack
-
-- **HTML5** - Semantic markup
-- **CSS3** - Modern styling with animations
-- **JavaScript ES6+** - Interactive features and form handling
-- **Font Awesome** - Icons
-- **Google Fonts** - Inter and Playfair Display typography
-
-## File Structure
-
-```
-karolina-prevodi/
-âââ index.html          # Main page with all sections
-âââ styles.css          # Complete styling with responsive design
-âââ script.js           # Interactive features and animations
-âââ README.md           # This file
+```sh
+python3 -m http.server 8080
 ```
 
-## Sections
+Open http://localhost:8080.
 
-1. **Hero Section** - Eye-catching introduction with call-to-action
-2. **Services** - Overview of translation services offered
-3. **About** - Professional background and expertise
-4. **Portfolio** - Recent translation projects
-5. **Contact** - Contact form and business information
-6. **Footer** - Additional links and company information
+## Content and design
+
+- `index.html`: service overview, profile, process, two-step inquiry, and FAQ. Serbian is readable without JavaScript; an email alternative is shown if scripts are unavailable.
+- `translations.js`: matching Serbian and English text. Edit both translations and the default HTML when changing copy. Language preference is kept locally; blocked storage does not break the site.
+- `styles.css`: responsive paper / forest-green visual identity, original typographic artwork, mobile navigation, keyboard focus, and reduced-motion support.
+- `script.js`: language switching, mobile navigation, inquiry validation and delivery.
+- `privacy.html`: privacy information.
+
+The profile uses existing site information. The monogram is intentional; no fabricated portrait, credentials, clients, testimonials, or portfolio claims were added.
+
+## Inquiries
+
+Service cards preselect the relevant field. The first step collects service, language direction, optional deadline, and project description. The second collects name, email, and consent. Both steps are included in the request.
+
+The existing Formspree endpoint is preserved: `https://formspree.io/f/xpqoegvn`. Successful HTTP responses show confirmation; network failures, errors, and a 20-second timeout preserve the inquiry and show an email alternative. Duplicate submissions are disabled while sending. Attachments are sent by email; the page does not assume paid file-upload support on the Formspree account.
+
+The endpoint’s account ownership, activation, and real inbox delivery must be checked by its owner before launch. Development checks use simulated responses and do not send emails.
+
+## Validation
+
+Checked in the browser on desktop and mobile, including navigation, service selection, validation, and switching languages without losing input. Isolated DOM tests cover complete payloads, both form steps, duplicate prevention, success, HTTP and network errors, recovery, translation keys, IDs, and anchor targets.
 
 ## Deployment
 
-### GitHub Pages (Recommended)
-
-1. Create a new repository named `karolina-prevodi.github.io`
-2. Push all files to the repository
-3. Enable GitHub Pages in repository settings
-4. Your site will be live at `https://karolina-prevodi.github.io`
-
-### Custom Domain
-
-To use a custom domain:
-
-1. Add a `CNAME` file with your domain name
-2. Configure DNS settings with your domain provider
-3. Update GitHub Pages settings
-
-## Customization
-
-### Colors
-
-Main colors are defined in `styles.css`:
-- Primary: `#3498db` (blue)
-- Secondary: `#2c3e50` (dark blue)
-- Accent: `#ffd700` (gold)
-- Background: `#f8f9fa` (light gray)
-
-### Fonts
-
-- **Inter** - Body text and headings
-- **Playfair Display** - Brand title and decorative elements
-
-### Content
-
-Edit the following in `index.html`:
-- Contact information in the contact section
-- Service descriptions
-- Portfolio items
-- About section content
-- Social media links
-
-## Performance
-
-The website is optimized for:
-- **Fast loading** - Minimal external dependencies
-- **Smooth animations** - CSS transitions and JavaScript animations
-- **Mobile performance** - Responsive design and touch-friendly interface
-- **SEO** - Semantic HTML and meta tags
-
-## Browser Support
-
-- Chrome 60+
-- Firefox 55+
-- Safari 12+
-- Edge 79+
-
-## Contact Form
-
-The contact form includes:
-- Client-side validation
-- Loading states
-- Success/error messages
-- Spam protection (add reCAPTCHA if needed)
-
-To make the form functional, integrate with:
-- Formspree (free tier available)
-- Netlify Forms
-- Custom backend service
-
-## Analytics
-
-Add Google Analytics or similar service to track:
-- Page views
-- User engagement
-- Contact form submissions
-- Traffic sources
-
-## Maintenance
-
-Regular updates needed for:
-- Portfolio items
-- Service descriptions
-- Contact information
-- Security updates
-
-## License
-
-This project is open source and available under the MIT License.
-
-## Getting Started
-
-1. Clone or download the repository
-2. Open `index.html` in your browser
-3. Customize content as needed
-4. Deploy to GitHub Pages or your preferred hosting
-
-## Support
-
-For questions or support:
-- Check the GitHub issues
-- Contact through the website form
-- Review the documentation
-
----
-
-**Built with love for professional translators** ð
+The existing GitHub Pages workflow publishes the static repository. No production deployment is performed as part of local editing. Review the canonical URL, social image, and Formspree account when publishing to a different domain.
