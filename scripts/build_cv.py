@@ -44,6 +44,15 @@ class Column:
     def p(self,text,after=7,**kw):
         self.y=para(text,self.x,self.y,self.width,**kw)-after
     def section(self,label):
+        anchors = {
+            tr('EDUCATION'): 535,
+            tr('TRANSLATION EXPERIENCE'): 416,
+            tr('PROFESSIONAL TRAINING','STRUČNO USAVRŠAVANJE'): 251,
+        } if self.x == 216 else {}
+        if label in anchors:
+            target = anchors[label] + 13
+            assert self.y >= target - 1, f'Section overlap: {label}: {self.y} < {target}'
+            self.y = target
         self.y-=13
         line(self.x,self.y,self.x+self.width,self.y)
         self.y-=11
@@ -56,8 +65,9 @@ para(tr('TRANSLATION / AGENCY COLLABORATION','PREVOĐENJE / SARADNJA SA AGENCIJA
 para('Karolina Lukač',36,H-52,470,size=37,leading=45,font='Display',color=GREEN)
 para(tr('Freelance translator','Samostalni prevodilac'),39,H-107,400,size=12,leading=16,color=GREEN)
 para(tr('Serbian &amp; English','Srpski i engleski'),39,H-132,390,size=10,leading=14,color=MUTED)
-c.setFillColor(HexColor('#DFE5D2'));c.circle(W-65,H-110,29,fill=1,stroke=0)
-para('SR<br/>EN',W-78,H-96,33,size=10,leading=14,font='Body-Bold',color=GREEN)
+# Place the supplied photograph unchanged; no retouching or generated likeness.
+c.drawImage(str(ROOT / 'assets/karolina-lukac-portrait.png'), W-154, H-145,
+            width=116, height=116, preserveAspectRatio=True, mask='auto')
 
 # Left rail: contact and quick reference. Text remains selectable; links are live.
 left=Column(38,H-190,143)
@@ -101,6 +111,8 @@ main.section(tr('PROFESSIONAL TRAINING','STRUČNO USAVRŠAVANJE'))
 main.p('Ciklopea Summer School',font='Body-Bold',size=10.3,leading=14,after=3)
 main.p(tr('Translation & localization / 2017','Prevođenje i lokalizacija / 2017'),size=8.5,leading=11,color=OLIVE,after=7)
 main.p(tr('Two-week translation and localization programme covering the language industry, business communication, translation under mentorship, and CAT and quality-assurance workshops. Training included Trados, Across and Verifika.'),size=9,leading=12.6,after=13)
+assert main.y >= 119, f'Training overlap: {main.y}'
+main.y = 119
 main.p(tr('Association of Scientific and Technical Translators of Serbia','Udruženje naučnih i stručnih prevodilaca Srbije'),font='Body-Bold',size=10,leading=13.5,after=3)
 main.p(tr('Translation & interpreting / 2016 - 2017','Usmeno i pisano prevođenje / 2016 - 2017'),size=8.5,leading=11,color=OLIVE,after=7)
 main.p(tr('Translation and interpreting courses: translation theory, socio-political systems, economics, electrical, mechanical and civil engineering, and legal terminology.'),size=9,leading=12.6,after=0)
