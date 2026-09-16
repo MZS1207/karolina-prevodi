@@ -1,5 +1,7 @@
 """Build the agency CV. Requires reportlab; CV_FONT_DIR may override Arial fonts."""
 import os
+import argparse
+import json
 from pathlib import Path
 from reportlab.pdfgen import canvas
 from reportlab.lib.colors import HexColor
@@ -10,16 +12,20 @@ from reportlab.platypus import Paragraph
 from reportlab.lib.styles import ParagraphStyle
 
 ROOT = Path(__file__).resolve().parents[1]
+parser = argparse.ArgumentParser()
+parser.add_argument('--lang', choices=['en', 'sr'], default='en')
+LANG = parser.parse_args().lang
+SR = json.loads((ROOT / 'scripts/cv_sr.json').read_text()) if LANG == 'sr' else {}
 FONT = Path(os.environ.get('CV_FONT_DIR', '/System/Library/Fonts/Supplemental'))
 for name, file in [('ArialCV', 'Arial.ttf'), ('ArialCV-Bold', 'Arial Bold.ttf')]:
     pdfmetrics.registerFont(TTFont(name, str(FONT / file)))
 pdfmetrics.registerFontFamily('ArialCV', normal='ArialCV', bold='ArialCV-Bold')
-OUT = ROOT / 'output/pdf/Karolina-Lukac-Translator-CV-EN.pdf'
+OUT = ROOT / f'output/pdf/Karolina-Lukac-Translator-CV-{LANG.upper()}.pdf'
 OUT.parent.mkdir(parents=True, exist_ok=True)
 c = canvas.Canvas(str(OUT), pagesize=A4)
-c.setTitle('Karolina Lukač | Serbian-English Translator | CV')
+c.setTitle('Karolina Lukač | Prevodilac za srpski i engleski | CV' if LANG == 'sr' else 'Karolina Lukač | Serbian-English Translator | CV')
 c.setAuthor('Karolina Lukač')
-c.setSubject('Freelance translation - agency collaboration')
+c.setSubject('Prevodilačke usluge - saradnja sa agencijama' if LANG == 'sr' else 'Freelance translation - agency collaboration')
 W, H = A4
 left, width = 46, W - 92
 y = H - 48
@@ -27,6 +33,12 @@ ink, green, muted = '#24372F', '#244E3C', '#58645D'
 
 def paragraph(text, size=9.6, leading=14, color=ink, bold=False, after=7):
     global y
+    if LANG == 'sr':
+        prefix = '• ' if text.startswith('• ') else ''
+        source = text[len(prefix):]
+        text = prefix + SR.get(source, source)
+        if text.startswith('Serbia &nbsp;'):
+            text = text.replace('Serbia', 'Srbija', 1)
     p = Paragraph(text, ParagraphStyle('cv', fontName='ArialCV-Bold' if bold else 'ArialCV', fontSize=size, leading=leading, textColor=HexColor(color)))
     _, height = p.wrap(width, H)
     p.drawOn(c, left, y-height)

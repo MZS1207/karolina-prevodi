@@ -137,7 +137,7 @@ window.siteTranslations = {
     "cv-description":
       "Profesionalni profil, oblasti rada i kvalifikacije u jednom dokumentu.",
     "cv-download": "Preuzmite CV",
-    "cv-format": "PDF · Engleski · 1 strana",
+    "cv-format": "PDF · Srpski · 1 strana",
   },
   en: {
     skip: "Skip to content",

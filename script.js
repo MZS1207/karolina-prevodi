@@ -98,6 +98,12 @@
   function applyLanguage(next) {
     language = next;
     document.documentElement.lang = next;
+    const cvDownload = document.getElementById("cv-download");
+    if (cvDownload) {
+      const filename = `Karolina-Lukac-Translator-CV-${next === "en" ? "EN" : "SR"}.pdf`;
+      cvDownload.setAttribute("href", `output/pdf/${filename}`);
+      cvDownload.setAttribute("download", filename);
+    }
     if (dictionary)
       document.querySelectorAll("[data-i18n]").forEach((element) => {
         const value = dictionary[next][element.dataset.i18n];
