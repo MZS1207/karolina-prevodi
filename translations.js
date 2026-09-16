@@ -138,6 +138,15 @@ window.siteTranslations = {
       "Profesionalni profil, oblasti rada i kvalifikacije u jednom dokumentu.",
     "cv-download": "Preuzmite CV",
     "cv-format": "PDF · Srpski · 1 strana",
+    "credential-degree-type": "MASTER STUDIJE · 2013–2015",
+    "credential-degree-title": "Univerzitet u Novom Sadu",
+    "credential-degree-desc":
+      "Završene master studije engleskog jezika i književnosti, sa prosekom 9,43/10,00.",
+    "credential-association-type": "STRUČNA OBUKA · 2016–2017",
+    "credential-association-title":
+      "Udruženje naučnih i stručnih prevodilaca Srbije",
+    "credential-association-desc":
+      "Obuka za usmeno i pisano prevođenje: teorija prevođenja, društveno-politički sistemi, ekonomija, elektrotehnika, mašinstvo, građevinarstvo i pravna terminologija.",
   },
   en: {
     skip: "Skip to content",
@@ -277,5 +286,14 @@ window.siteTranslations = {
       "Professional background, areas of work and qualifications in one document.",
     "cv-download": "Download CV",
     "cv-format": "PDF · English · 1 page",
+    "credential-degree-type": "MASTER’S DEGREE · 2013–2015",
+    "credential-degree-title": "University of Novi Sad",
+    "credential-degree-desc":
+      "Master’s degree in English Language and Literature, with a final grade of 9.43/10.00.",
+    "credential-association-type": "PROFESSIONAL TRAINING · 2016–2017",
+    "credential-association-title":
+      "Association of Scientific and Technical Translators of Serbia",
+    "credential-association-desc":
+      "Translation and interpreting courses covering translation theory, socio-political systems, economics, electrical, mechanical and civil engineering, and legal terminology.",
   },
 };

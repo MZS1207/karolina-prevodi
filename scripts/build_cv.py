@@ -46,12 +46,12 @@ def paragraph(text, size=9.6, leading=14, color=ink, bold=False, after=7):
 
 def section(title):
     global y
-    y -= 8
+    y -= 4
     c.setStrokeColor(HexColor('#D6DED4'))
     c.setLineWidth(.6)
     c.line(left, y, W-left, y)
-    y -= 17
-    paragraph(title, size=8.3, leading=10, color=green, bold=True, after=10)
+    y -= 10
+    paragraph(title, size=8.3, leading=10, color=green, bold=True, after=4)
 
 paragraph('KAROLINA LUKAČ', size=28, leading=33, color=green, bold=True, after=8)
 paragraph('FREELANCE TRANSLATOR  |  SERBIAN &amp; ENGLISH', size=10.2, leading=14, color=green, bold=True, after=11)
@@ -59,6 +59,9 @@ paragraph('Serbia &nbsp; | &nbsp; <link href="mailto:karolinalukac@gmail.com" co
 paragraph('<link href="https://mzs1207.github.io/karolina-prevodi/" color="#244E3C">mzs1207.github.io/karolina-prevodi</link> &nbsp; | &nbsp; <link href="https://www.linkedin.com/in/karolina-luka%C4%8D-402ba5130/" color="#244E3C">LinkedIn: Karolina Lukač</link>',size=9,leading=13,after=8)
 section('PROFESSIONAL PROFILE')
 paragraph('Freelance translator working between Serbian and English, with experience across literary, medical, technical and business texts. Focused on preserving meaning and authorial voice, researching specialist terminology and producing clear, natural translations. Interested in project-based and ongoing collaboration with translation agencies.')
+section('EDUCATION')
+paragraph('University of Novi Sad | 2013 - 2015',size=10,leading=13,bold=True,after=3)
+paragraph('Master’s Degree in English Language and Literature | Grade: 9.43/10.00',size=9.4,leading=13,after=4)
 section('TRANSLATION EXPERIENCE')
 paragraph('Freelance Translator | Karolina Prevodi',size=10.5,leading=14,bold=True,after=6)
 for txt in [
@@ -71,6 +74,8 @@ paragraph('<b>Literary:</b> fiction, non-fiction and prose.<br/><b>Medical &amp;
 section('PROFESSIONAL TRAINING & CERTIFICATION')
 paragraph('Ciklopea Summer School | 2017',size=10,leading=13,bold=True,after=4)
 paragraph('Two-week translation and localization programme covering the language industry, business communication, translation under mentorship, and CAT and quality-assurance workshops. Training included Trados, Across and Verifika.',size=9.4,leading=13.3,after=9)
+paragraph('Association of Scientific and Technical Translators of Serbia | 2016 - 2017',size=9.6,leading=13,bold=True,after=3)
+paragraph('Translation and interpreting courses: translation theory, socio-political systems, economics, electrical, mechanical and civil engineering, and legal terminology.',size=9.4,leading=13.3,after=8)
 paragraph('Cambridge English: Advanced (CAE)',size=10,leading=13,bold=True,after=3)
 paragraph('Cambridge English Language Assessment',size=9.4,leading=13,color=muted,after=4)
 section('LANGUAGES')
