@@ -35,3 +35,9 @@ Checked in the browser on desktop and mobile, including navigation, service sele
 ## Deployment
 
 The existing GitHub Pages workflow publishes the static repository. No production deployment is performed as part of local editing. Review the canonical URL, social image, and Formspree account when publishing to a different domain.
+
+## Agency CV
+
+The downloadable English CV is `output/pdf/Karolina-Lukac-Translator-CV-EN.pdf`. The download card is in the About section, with translated labels and a same-origin download link. The PDF contains selectable text and clickable contact links.
+
+To regenerate it, run `python3 scripts/build_cv.py` with ReportLab installed. The builder uses Arial TrueType fonts from macOS; set `CV_FONT_DIR` to a folder containing `Arial.ttf` and `Arial Bold.ttf` elsewhere. Render and inspect the PDF after editing. Content is limited to the existing site and the public LinkedIn details available during this project; unknown employment dates, degrees, clients and proficiency in CAT tools are not invented. CAT tools are explicitly described as training.

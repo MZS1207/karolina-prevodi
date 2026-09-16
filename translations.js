@@ -133,6 +133,11 @@ window.siteTranslations = {
     "credential-paper-desc":
       "Rad o glagolima kretanja u engleskom jeziku i njihovom prevođenju na srpski, naveden uz Filozofski fakultet Univerziteta u Novom Sadu.",
     "credentials-source": "Više o kvalifikacijama na LinkedIn-u",
+    "cv-label": "ZA PREVODILAČKE AGENCIJE",
+    "cv-description":
+      "Profesionalni profil, oblasti rada i kvalifikacije u jednom dokumentu.",
+    "cv-download": "Preuzmite CV",
+    "cv-format": "PDF · Engleski · 1 strana",
   },
   en: {
     skip: "Skip to content",
@@ -267,5 +272,10 @@ window.siteTranslations = {
     "credential-paper-desc":
       "A study of English verbs of walking and their Serbian translations, listed with the Faculty of Philosophy, University of Novi Sad.",
     "credentials-source": "Explore qualifications on LinkedIn",
+    "cv-label": "FOR TRANSLATION AGENCIES",
+    "cv-description":
+      "Professional background, areas of work and qualifications in one document.",
+    "cv-download": "Download CV",
+    "cv-format": "PDF · English · 1 page",
   },
 };
