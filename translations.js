@@ -162,8 +162,8 @@ window.siteTranslations = {
     "work-freelance-desc":
       "Prevođenje pravnih, tehničkih i medicinskih dokumenata, marketinških materijala i sajtova, kao i lektura uputstava i specifikacija.",
     "publications-label": "OBJAVLJENI PREVODI",
-    "publication-2019": "Monografija · Prevod na engleski · 2019",
-    "publication-2021": "Knjiga · Prevod na engleski · 2021",
+    "publication-sombor": "Monografija · Prevod na engleski · 2021",
+    "publication-senta": "Knjiga · Prevod na engleski · 2019",
   },
   en: {
     skip: "Skip to content",
@@ -327,7 +327,7 @@ window.siteTranslations = {
     "work-freelance-desc":
       "Translation of legal, technical and medical documents, marketing materials and websites, plus proofreading manuals and specifications.",
     "publications-label": "PUBLISHED TRANSLATIONS",
-    "publication-2019": "Monograph · Translated into English · 2019",
-    "publication-2021": "Book · Translated into English · 2021",
+    "publication-sombor": "Monograph · Translated into English · 2021",
+    "publication-senta": "Book · Translated into English · 2019",
   },
 };
